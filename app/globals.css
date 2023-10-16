@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #FFF;
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
+
+body {
+  color: var(--text);
+  background-color:darkgray;  
+  
+}
+.containerSection{
+
+}
+
