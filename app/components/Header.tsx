@@ -10,11 +10,16 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <div className="bg-header-bg pt-9 pb-14 px-5">
+    <section className="bg-header-bg bg-no-repeat bg-cover pt-9 pb-14 px-5">
       <div className="flex justify-between mb-9">
         <Image src="/logo.svg" alt="Logo" width={61} height={33} />
         <div className="mobile-menu md:hidden">
-          <button onClick={toggleMobileMenu}>Menu</button>
+          <button
+            className="text-subTitle uppercase tracking-[1.4px]"
+            onClick={toggleMobileMenu}
+          >
+            Menu
+          </button>
           {isMobileMenuOpen && (
             <MobileMenu closeMenu={() => setMobileMenuOpen(false)} />
           )}
@@ -22,7 +27,7 @@ const Header = () => {
         <nav className="desktop-nav hidden md:flex"></nav>
       </div>
       <div>
-        <h1 className="text-xl font-light tracking-[9px]">
+        <h1 className="text-xl font-light tracking-[9px] text-right mb-6">
           <span className="text-4xl font-medium">7</span>
           <span className="text-4xl font-thin">DAYS</span>
           <br /> JOURNEY
@@ -31,19 +36,19 @@ const Header = () => {
           Uncover <br />
           <span className="font-thin">Carpathian’s Secrets</span>
         </h2>
-        <p className="text-subText mb-6">
+        <p className="text-subText mb-6 w-40">
           Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel
         </p>
-        <p className="text-text mb-6">
+        <p className="text-text text-justify mb-6 max-w-md">
           We offer you unforgettable trips to the most beautiful parts of the
           Carpathians. Enjoy stunning views, exciting expeditions, and the best
           service!
         </p>
-        <button className="uppercase text-[18px] font-bold border px-16 py-[18px] bg-white/10">
+        <button className="uppercase text-[18px] font-bold border px-[93px] py-[18px] bg-white/10 ">
           Join now
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
