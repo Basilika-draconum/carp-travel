@@ -10,7 +10,7 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <section className="bg-header-bg bg-no-repeat bg-cover pt-9 pb-14 px-5">
+    <section className=" w-full bg-header-bg bg-no-repeat bg-cover pt-9 pb-14 px-5">
       <div className="flex justify-between mb-9">
         <Image src="/logo.svg" alt="Logo" width={61} height={33} />
         <div className="mobile-menu md:hidden">

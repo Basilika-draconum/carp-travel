@@ -17,7 +17,9 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'header-bg': "url('/images/header.png')",
         'about-bg': "url('/images/about-couple.png')",
-         'career-bg':"url('/images/career.png')",
+        'career-bg': "url('/images/career.png')",
+         'gallery-bg':"url('/images/gallery-tree.png')",
+         'contact-bg':"url('/images/contact.png')",
       },
        fontSize: {
         title: ["40px", { fontWeight: "500", lineHeight: "56px" }],

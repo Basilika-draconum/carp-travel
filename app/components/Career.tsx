@@ -4,7 +4,7 @@ import CareerForm from "./CareerForm";
 const Career = () => {
   return (
     <>
-      <section className="bg-career-bg bg-no-repeat bg-cover bg-center pt-9 pb-14 px-5">
+      <section className=" w-full bg-career-bg bg-no-repeat bg-cover bg-center pt-9 pb-14 px-5">
         <h2 className="text-title mb-6">
           <span className="font-thin">Choose </span>us
         </h2>
