@@ -12,10 +12,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       >
         Close
       </button>
-      <ul className="bg-green p-8 rounded-lg">
+      <ul className="bg-green p-8 rounded-lg flex flex-col items-center gap-12 text-subTitle text-[18px] tracking-[1.8px]">
         <li className="">
-          <a onClick={closeMenu} href="#">
+          <a onClick={closeMenu} href="#about">
             About
+          </a>
+        </li>
+        <li className="">
+          <a onClick={closeMenu} href="#services">
+            Services
+          </a>
+        </li>
+        <li className="">
+          <a onClick={closeMenu} href="#career">
+            Career
+          </a>
+        </li>
+        <li className="">
+          <a onClick={closeMenu} href="#gallery">
+            Gallery
+          </a>
+        </li>
+        <li className="">
+          <a onClick={closeMenu} href="#contacts">
+            Contacts
           </a>
         </li>
       </ul>

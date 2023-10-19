@@ -8,12 +8,15 @@ const gallery = [
 ];
 const Gallery = () => {
   return (
-    <section className="w-full bg-gallery-bg bg-no-repeat bg-cover bg-center pt-9 pb-14 px-5">
-      <h2 className="text-title">
+    <section
+      id="gallery"
+      className="w-full bg-gallery-bg bg-no-repeat bg-cover bg-center pt-9 pb-14 px-5"
+    >
+      <h2 className="text-title tablet:pt-[64px] tablet:px-8 tablet:pb-16 desktop:px-[104px] desktop:pb-[104px]">
         <span className="font-thin">Our </span>gallery
       </h2>
-      <div>
-        <ul className="flex flex-col justify-center items-center">
+      <div className="">
+        <ul className="flex flex-col justify-center items-center tablet:hidden">
           {gallery.map((img) => (
             <Image
               key={img.id}

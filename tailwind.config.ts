@@ -22,7 +22,9 @@ const config: Config = {
          'contact-bg':"url('/images/contact.png')",
       },
        fontSize: {
-        title: ["40px", { fontWeight: "500", lineHeight: "56px" }],
+         title: ["40px", { fontWeight: "500", lineHeight: "56px" }],
+         titleTb: ["67px", { fontWeight: "500" }],
+         titleDt: ["98px", { fontWeight: "500" }],
         subTitle: ["14px", { fontWeight: "400" }],
         text: ["14px", { fontWeight: "200" }],
         subText: ["10px", { fontWeight: "200" }],
