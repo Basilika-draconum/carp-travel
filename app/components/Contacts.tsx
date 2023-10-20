@@ -24,7 +24,7 @@ const Contacts = () => {
       <h2 className="uppercase text-title mb-9 tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] desktop:text-titleDt desktop:mb-[81px] desktop:leading-tight">
         <span className="font-thin">Contact </span>us
       </h2>
-      <div className="desktop:flex desktop:justify-around">
+      <div className="desktop:flex desktop:gap-[110px]">
         <address>
           <ul className="flex flex-col items-end not-italic gap-6 tablet:items-center tablet:flex-wrap tablet:h-[96px] tablet:mb-16 desktop:h-auto desktop:gap-0">
             <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-16">
@@ -94,7 +94,7 @@ const Contacts = () => {
                 Full name
               </label>
               <input
-                className="bg-white/[.05] py-1 pl-2 pr-2 w-full"
+                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
                 placeholder="John Smith"
                 {...register("fullName")}
               />
@@ -105,13 +105,13 @@ const Contacts = () => {
                 E-mail
               </label>
               <input
-                className="bg-white/[.05] py-1 pl-2 pr-2 w-full"
+                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
                 placeholder="johnsmith@email.com"
                 {...register("email", { required: true })}
               />
             </div>
           </div>
-          <div className="tablet:w-[463px]">
+          <div className="tablet:w-[463px] desktop:w-auto">
             <div className="">
               <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
                 Message
