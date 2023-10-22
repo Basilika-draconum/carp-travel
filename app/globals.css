@@ -9,17 +9,9 @@
     box-sizing: border-box;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-  }
-} */
-
 body {
   color: var(--text);
   background-color:darkgray;  
   
-}
-.containerSection{
-
 }
 

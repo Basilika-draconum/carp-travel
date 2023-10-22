@@ -1,0 +1,30 @@
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    top: 90%;
+    font-size: 33px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.swiper-button-prev{
+    left: 69px;
+}
+.swiper-button-next {
+    right: 69px;
+}
+
+.swiper-slide-active {
+    transform: scale(1.1);
+}
+
+/* Затемнені слайди */
+.slide-0,
+.slide-2 {
+    opacity: 0.5;
+   
+}
