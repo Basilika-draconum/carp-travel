@@ -13,18 +13,33 @@
 }
 .swiper-button-prev{
     left: 69px;
+    @media screen and (min-width:1280px) {
+        left: 220px;
+    }
 }
 .swiper-button-next {
     right: 69px;
+    @media screen and (min-width:1280px) {right: 220px;}
 }
+
+/* .swiper-slide-active {
+    transform: scale(1);
+} */
 
 .swiper-slide-active {
-    transform: scale(1.1);
+    min-width: 440px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: 70px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    @media screen and (min-width:1280px){
+        min-width: 640px;
+    }
 }
-
-/* Затемнені слайди */
-.slide-0,
-.slide-2 {
-    opacity: 0.5;
+.swiper-slide-inactive{
+    max-width: 130px;
+}
    
-}
