@@ -98,7 +98,7 @@ const Gallery = () => {
       </h2>
       <div className="">
         <ul className="flex flex-col justify-center items-center tablet:hidden">
-          {gallery.map((img) => (
+          {gallery.slice(3).map((img) => (
             <li key={img.id}>
               <Image
                 src={img.image}

@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -27,29 +28,59 @@ const Header = () => {
         <nav className="desktop-nav hidden tablet:flex">
           <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
             <li className="">
-              <a onClick={toggleMobileMenu} href="#about">
+              <Link
+                onClick={toggleMobileMenu}
+                to="about"
+                spy
+                smooth
+                duration={600}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a onClick={toggleMobileMenu} href="#services">
+              <Link
+                onClick={toggleMobileMenu}
+                to="services"
+                spy
+                smooth
+                duration={800}
+              >
                 Services
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a onClick={toggleMobileMenu} href="#career">
+              <Link
+                onClick={toggleMobileMenu}
+                to="career"
+                spy
+                smooth
+                duration={1000}
+              >
                 Career
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a onClick={toggleMobileMenu} href="#gallery">
+              <Link
+                onClick={toggleMobileMenu}
+                to="gallery"
+                spy
+                smooth
+                duration={1000}
+              >
                 Gallery
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a onClick={toggleMobileMenu} href="#contacts">
+              <Link
+                onClick={toggleMobileMenu}
+                to="contacts"
+                spy
+                smooth
+                duration={1000}
+              >
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -84,9 +115,15 @@ const Header = () => {
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!
           </p>
-          <button className="uppercase text-[18px] font-bold border px-[93px] py-[18px] bg-white/10 tablet:px-[64px] tablet:py-[14px] desktop:py-[16px] desktop:text-[32px]">
+          <Link
+            className="uppercase text-[18px] font-bold border px-[93px] py-[18px] bg-white/10 tablet:px-[64px] tablet:py-[14px] desktop:py-[16px] desktop:text-[32px]"
+            to="contacts"
+            spy
+            smooth
+            duration={1500}
+          >
             Join now
-          </button>
+          </Link>
         </div>
       </div>
     </section>

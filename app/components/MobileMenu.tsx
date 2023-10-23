@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 interface MobileMenuProps {
   closeMenu: () => void;
@@ -14,29 +15,29 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       </button>
       <ul className="bg-green p-8 rounded-lg flex flex-col items-center gap-12 text-subTitle text-[18px] tracking-[1.8px]">
         <li className="">
-          <a onClick={closeMenu} href="#about">
+          <Link onClick={closeMenu} to="about" spy smooth duration={600}>
             About
-          </a>
+          </Link>
         </li>
         <li className="">
-          <a onClick={closeMenu} href="#services">
+          <Link onClick={closeMenu} to="services" spy smooth duration={800}>
             Services
-          </a>
+          </Link>
         </li>
         <li className="">
-          <a onClick={closeMenu} href="#career">
+          <Link onClick={closeMenu} to="career" spy smooth duration={1000}>
             Career
-          </a>
+          </Link>
         </li>
         <li className="">
-          <a onClick={closeMenu} href="#gallery">
+          <Link onClick={closeMenu} to="gallery" spy smooth duration={1000}>
             Gallery
-          </a>
+          </Link>
         </li>
         <li className="">
-          <a onClick={closeMenu} href="#contacts">
+          <Link onClick={closeMenu} to="contacts" spy smooth duration={1500}>
             Contacts
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
