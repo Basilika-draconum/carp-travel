@@ -50,6 +50,7 @@ const carouselSettings = {
     prevEl: ".swiper-button-prev",
   },
   pagination: { clickable: true },
+  grabCursor: true,
   loop: true,
   slidesPerView: 2,
   centeredSlides: true,

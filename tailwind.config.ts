@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        errorColor:"#FF5757"
+      },
       screens: {
         'mobile': '320px',   
         'tablet': '768px',    

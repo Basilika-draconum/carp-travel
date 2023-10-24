@@ -1,21 +1,35 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-type FormData = {
+type FormDataContact = {
   fullName: string;
   email: string;
   message: string;
 };
-
+const formConfigContact = {
+  defaultValues: {
+    fullName: "",
+    email: "",
+    message: "",
+  },
+};
 const Contacts = () => {
   const {
     register,
-    setValue,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => console.log(data));
+  } = useForm<FormDataContact>(formConfigContact);
+
+  const onSubmit = handleSubmit((data) =>
+    alert(
+      `Email:${data.email},
+Full Name:${data.fullName},
+Message:${data.message}`
+    )
+  );
+
   return (
     <section
       id="contacts"
@@ -96,8 +110,23 @@ const Contacts = () => {
               <input
                 className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
                 placeholder="John Smith"
-                {...register("fullName")}
+                {...register("fullName", {
+                  required: "This is required",
+                  minLength: { value: 7, message: "Min length is 7" },
+                  pattern: {
+                    value: /^[A-Za-z]+$/i,
+                    message: "Enter only words",
+                  },
+                })}
               />
+              <div className=" flex">
+                {errors.fullName?.message && (
+                  <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                )}
+                <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  {errors.fullName?.message}
+                </p>
+              </div>
             </div>
 
             <div className="mb-6  desktop:mb-0">
@@ -107,8 +136,23 @@ const Contacts = () => {
               <input
                 className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
                 placeholder="johnsmith@email.com"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: "This is required",
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Invalid email",
+                  },
+                })}
               />
+              <div className=" flex">
+                {errors.email?.message && (
+                  <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                )}
+                <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  {errors.email?.message}
+                </p>
+              </div>
             </div>
           </div>
           <div className="tablet:w-[463px] desktop:w-auto">
@@ -120,8 +164,16 @@ const Contacts = () => {
                 className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full"
                 rows={8}
                 // cols={30}
-                {...register("message")}
+                {...register("message", { required: "This is required" })}
               />
+              <div className=" flex">
+                {errors.message?.message && (
+                  <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                )}
+                <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  {errors.message?.message}
+                </p>
+              </div>
             </div>
             <div className="flex justify-end">
               <input
