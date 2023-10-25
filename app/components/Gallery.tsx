@@ -46,7 +46,7 @@ const carouselSettings = {
   spaceBetween: 20,
   modules: [EffectCoverflow, Navigation, A11y],
   navigation: {
-    nextEl: ".swiper-button-next ",
+    nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: { clickable: true },
