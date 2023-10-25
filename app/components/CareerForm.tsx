@@ -57,7 +57,7 @@ const CareerForm = () => {
 
       <form onSubmit={onSubmit}>
         <div className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-[290px] desktop:h-[331px]">
-          <div className="mb-4 tablet:mr-5 tablet:mb-2 desktop:mb-6">
+          <div className="mb-4 tablet:mr-5 tablet:mb-2 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               Full name
             </label>
@@ -83,7 +83,7 @@ const CareerForm = () => {
             </div>
           </div>
 
-          <div className="mb-4  tablet:mb-2 tablet:mr-5 desktop:mb-6">
+          <div className="mb-4 tablet:mb-2 tablet:mr-5 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               E-mail
             </label>
@@ -109,20 +109,18 @@ const CareerForm = () => {
             </div>
           </div>
 
-          <div className="mb-4 tablet:mb-2 tablet:mr-5 desktop:mb-6">
+          <div className="mb-4 tablet:mb-2 tablet:mr-5 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               Position
             </label>
             <input
               className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5"
               placeholder="Movie maker"
-              {...register("position", {
-                required: "This is required",
-              })}
+              {...register("position")}
             />
           </div>
 
-          <div className="mb-4 tablet:mr-5 desktop:mb-6">
+          <div className="mb-4 tablet:mr-5 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               Phone
             </label>
@@ -154,19 +152,23 @@ const CareerForm = () => {
             </div>
           </div>
         </div>
-        <div className="tablet:flex tablet:justify-between">
-          <div className="checkbox-wrapper tablet:w-[222px] desktop:w-[258px]">
-            <input
-              type="checkbox"
-              id="isAgree"
-              {...register("isAgree")}
-              onChange={() => setIsChecked((prev) => !prev)}
-              checked={isChecked}
-              className={isChecked ? "checked" : ""}
-            />
-            <label className="text-text ml-1 tablet:text-[12px] ">
-              I confirm my consent to the processing of personal data.
-            </label>
+        <div className=" tablet:flex tablet:justify-between">
+          <div className="flex tablet:w-[222px] desktop:w-[258px]">
+            <div className="checkbox-wrapper ">
+              <input
+                type="checkbox"
+                id="isAgree"
+                {...register("isAgree")}
+                onChange={() => setIsChecked((prev) => !prev)}
+                checked={isChecked}
+                className={isChecked ? "checked" : ""}
+              />
+            </div>
+            <div className="ml-2">
+              <label className="text-text ml-1 tablet:text-[12px] ">
+                I confirm my consent to the processing of personal data.
+              </label>
+            </div>
           </div>
 
           <div className="flex justify-end">
