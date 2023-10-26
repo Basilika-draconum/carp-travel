@@ -2,15 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
-
-type FormDataCareer = {
-  fullName: string;
-  email: string;
-  position: string;
-  phone: string;
-  message: string;
-  isAgree: boolean;
-};
+import { FormDataCareer } from "../entities/types";
 
 const formConfigCareer = {
   defaultValues: {
@@ -54,7 +46,6 @@ const CareerForm = () => {
           <br /> Fill out the form right now and join our team!
         </h4>
       </div>
-
       <form onSubmit={onSubmit}>
         <div className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-[290px] desktop:h-[331px]">
           <div className="mb-4 tablet:mr-5 tablet:mb-2 desktop:mb-4">
@@ -62,7 +53,7 @@ const CareerForm = () => {
               Full name
             </label>
             <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5"
+              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
               placeholder="John Smith"
               {...register("fullName", {
                 required: "This is required",
@@ -82,13 +73,12 @@ const CareerForm = () => {
               </p>
             </div>
           </div>
-
           <div className="mb-4 tablet:mb-2 tablet:mr-5 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               E-mail
             </label>
             <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5"
+              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
               placeholder="johnsmith@email.com"
               {...register("email", {
                 required: "This is required",
@@ -108,13 +98,12 @@ const CareerForm = () => {
               </p>
             </div>
           </div>
-
           <div className="mb-4 tablet:mb-2 tablet:mr-5 desktop:mb-4">
             <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
               Position
             </label>
             <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5"
+              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
               placeholder="Movie maker"
               {...register("position")}
             />
@@ -125,7 +114,7 @@ const CareerForm = () => {
               Phone
             </label>
             <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5"
+              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
               placeholder="+ 38 097 12 34 567"
               {...register("phone", {
                 required: "This is required",
@@ -170,7 +159,6 @@ const CareerForm = () => {
               </label>
             </div>
           </div>
-
           <div className="flex justify-end">
             <input
               className="uppercase font-medium text-3xl text-right mt-4 tablet:mt-0"

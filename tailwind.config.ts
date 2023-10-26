@@ -14,10 +14,10 @@ const config: Config = {
       screens: {
         'mobile': '320px',   
         'tablet': '768px',    
-        'desktop': '1280px',   
+        'desktop': '1280px', 
+        'bigMobile':'480px'
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'header-bg': "url('/images/header.png')",
         'about-bg': "url('/images/about-couple.png')",
         'career-bg': "url('/images/career.png')",

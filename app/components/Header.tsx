@@ -116,7 +116,7 @@ const Header = () => {
             best service!
           </p>
           <Link
-            className="uppercase text-[18px] font-bold border px-[93px] py-[18px] bg-white/10 tablet:px-[64px] tablet:py-[14px] desktop:py-[16px] desktop:text-[32px]"
+            className="join-button uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px] "
             to="contacts"
             spy
             smooth

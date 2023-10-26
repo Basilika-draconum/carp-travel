@@ -60,7 +60,6 @@ const slides = [
 const carouselSettings = {
   spaceBetween: 30,
   navigation: true,
-  // pagination: { clickable: true },
   modules: [EffectFade, Navigation],
   effect: "fade",
   slidesPerView: 1,

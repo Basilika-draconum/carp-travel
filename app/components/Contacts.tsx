@@ -2,12 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { FormDataContact } from "../entities/types";
 
-type FormDataContact = {
-  fullName: string;
-  email: string;
-  message: string;
-};
 const formConfigContact = {
   defaultValues: {
     fullName: "",
@@ -108,7 +104,7 @@ Message:${data.message}`
                 Full name
               </label>
               <input
-                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
+                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px] placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
                 placeholder="John Smith"
                 {...register("fullName", {
                   required: "This is required",
@@ -128,13 +124,12 @@ Message:${data.message}`
                 </p>
               </div>
             </div>
-
             <div className="mb-6  desktop:mb-0">
               <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
                 E-mail
               </label>
               <input
-                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px]"
+                className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px] placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
                 placeholder="johnsmith@email.com"
                 {...register("email", {
                   required: "This is required",
@@ -161,9 +156,8 @@ Message:${data.message}`
                 Message
               </label>
               <textarea
-                className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full"
+                className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full "
                 rows={8}
-                // cols={30}
                 {...register("message", { required: "This is required" })}
               />
               <div className=" flex">
