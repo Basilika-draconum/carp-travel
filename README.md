@@ -1,18 +1,10 @@
 # CarpTravel
 
-Site offer to join you unforgettable trips to the most beautiful parts of the Carpathians.
-
-## Project Overview
-
-This project is a website created using a variety of technologies, including Next.js 13 (with the app router), Tailwind CSS, and TypeScript.
-
-# CarpTravel
-
 CarpTravel is a website that offers unforgettable trips to the most beautiful parts of the Carpathian Mountains.
 
 ## Project Overview
 
-This project was built using a combination of technologies, including Next.js 13 with the app router, Tailwind CSS, and TypeScript. It meets a range of technical and functional requirements.
+This project was built using a combination of technologies, including Next.js 13 with the app router, Tailwind CSS, and TypeScript.
 
 ## Technologies Used
 
