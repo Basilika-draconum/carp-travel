@@ -26,11 +26,11 @@ This project was built using a combination of technologies, including Next.js 13
 - Semantic and valid structure.
 - Responsive and cross-browser compatible design:
   - Mobile devices from 320px.
-    ![Mobile CarpTravel](/images/320.png)
+    ![Mobile CarpTravel](public/images/320.png)
   - Tablets from 768px.
-    ![Tablet CarpTravel](/images/768.png)
+    ![Tablet CarpTravel](public/images/768.png)
   - Desktops from 1280px.
-    ![Desktop CarpTravel](/images/1280.png)
+    ![Desktop CarpTravel](public/images/1280.png)
 
 ## Functionality
 
