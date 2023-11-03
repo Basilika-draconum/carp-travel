@@ -27,7 +27,7 @@ const Header = () => {
         </div>
         <nav className="desktop-nav hidden tablet:flex">
           <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
-            <li className="">
+            <li className="cursor-pointer">
               <Link
                 onClick={toggleMobileMenu}
                 to="about"
@@ -38,7 +38,7 @@ const Header = () => {
                 About
               </Link>
             </li>
-            <li className="">
+            <li className="cursor-pointer">
               <Link
                 onClick={toggleMobileMenu}
                 to="services"
@@ -49,7 +49,7 @@ const Header = () => {
                 Services
               </Link>
             </li>
-            <li className="">
+            <li className="cursor-pointer">
               <Link
                 onClick={toggleMobileMenu}
                 to="career"
@@ -60,7 +60,7 @@ const Header = () => {
                 Career
               </Link>
             </li>
-            <li className="">
+            <li className="cursor-pointer">
               <Link
                 onClick={toggleMobileMenu}
                 to="gallery"
@@ -71,7 +71,7 @@ const Header = () => {
                 Gallery
               </Link>
             </li>
-            <li className="">
+            <li className="cursor-pointer">
               <Link
                 onClick={toggleMobileMenu}
                 to="contacts"
@@ -116,7 +116,7 @@ const Header = () => {
             best service!
           </p>
           <Link
-            className="join-button uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px] "
+            className="join-button cursor-pointer uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 hover:bg-white/20 tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px] "
             to="contacts"
             spy
             smooth

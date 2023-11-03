@@ -161,7 +161,7 @@ const CareerForm = () => {
           </div>
           <div className="flex justify-end">
             <input
-              className="uppercase font-medium text-3xl text-right mt-4 tablet:mt-0"
+              className="uppercase cursor-pointer font-medium text-3xl text-right mt-4 tablet:mt-0"
               type="submit"
               value="send"
             />

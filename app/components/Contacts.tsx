@@ -171,7 +171,7 @@ Message:${data.message}`
             </div>
             <div className="flex justify-end">
               <input
-                className="uppercase font-medium text-3xl text-right mt-4 desktop:text-[32px]"
+                className="uppercase cursor-pointer font-medium text-3xl text-right mt-4 desktop:text-[32px]"
                 type="submit"
                 value="send"
               />
