@@ -7,55 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import slides from "../../public/content/slides.json";
 import "./slider.css";
-
-const slides = [
-  {
-    id: "1",
-    image: "/images/offer1.jpg",
-    background: "/images/offer-bg1.jpg",
-    title: "ATVs Traveling",
-    slogan: "Feel the adrenaline rush",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-  },
-  {
-    id: "2",
-    image: "/images/offer2.jpg",
-    background: "/images/offer-bg2.jpg",
-    title: "Rock climbing",
-    description:
-      "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks.",
-    slogan: "Destroy your limitations",
-  },
-  {
-    id: "3",
-    image: "/images/offer3.jpg",
-    background: "/images/offer-bg3.jpg",
-    title: "Hot air ballooning",
-    description:
-      "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless.",
-    slogan: "Get Inspired",
-  },
-  {
-    id: "4",
-    image: "/images/offer4.jpg",
-    background: "/images/offer-bg4.jpg",
-    title: "Skydiving",
-    description:
-      "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever.",
-    slogan: "Overcome your fears",
-  },
-  {
-    id: "5",
-    image: "/images/offer5.jpg",
-    background: "/images/offer-bg5.jpg",
-    title: "Rafting",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-    slogan: "Trust the flow",
-  },
-];
 
 const carouselSettings = {
   spaceBetween: 30,
@@ -74,14 +27,14 @@ const Slider = () => {
   };
 
   return (
-    <>
-      <Swiper
-        {...carouselSettings}
-        ref={swiperRef}
-        className="w-full h-full relative"
-      >
-        <div className="swiper-pagination"></div>
-        {slides.map((slide, index) => (
+    <Swiper
+      {...carouselSettings}
+      ref={swiperRef}
+      className="w-full h-full relative"
+    >
+      <div className="swiper-pagination"></div>
+      {slides &&
+        slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className="swiper-slide-gallery">
             <div
               className="pt-14 pb-14 px-5 tablet:px-8 tablet:py-16 desktop:p-[104px]"
@@ -183,8 +136,7 @@ const Slider = () => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
-    </>
+    </Swiper>
   );
 };
 

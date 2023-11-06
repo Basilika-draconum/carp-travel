@@ -1,46 +1,12 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation, A11y, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+import gallery from "../../public/content/gallery.json";
 import "./gallery.css";
-
-const gallery = [
-  {
-    image: "/images/gallery3.png",
-    alt: "mountain",
-    id: "1",
-  },
-  {
-    image: "/images/gallery1.png",
-    alt: "lake",
-    id: "2",
-  },
-  {
-    image: "/images/gallery2.png",
-    alt: "trees",
-    id: "3",
-  },
-  {
-    image: "/images/gallery3.png",
-    alt: "mountain",
-    id: "4",
-  },
-  {
-    image: "/images/gallery1.png",
-    alt: "lake",
-    id: "5",
-  },
-  {
-    image: "/images/gallery2.png",
-    alt: "trees",
-    id: "6",
-  },
-];
 
 const carouselSettings = {
   spaceBetween: 20,
