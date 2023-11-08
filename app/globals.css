@@ -12,6 +12,34 @@ body {
   color: var(--text);
   background-color:darkgray;  
 }
+
+.container-main {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    padding: 0 24px;
+  }
+}
+.section-main{
+  padding:55px 0;
+  @media screen and (min-width: 768px) {
+    padding: 64px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 104px 80px;
+  }
+}
+
 .checkbox-wrapper input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 import { Link } from "react-scroll";
-import navLink from "../../public/content/navigation.json";
+import navLink from "../../../public/content/navigation.json";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);

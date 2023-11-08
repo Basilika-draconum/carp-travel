@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FormDataCareer } from "../entities/types";
+import { FormDataCareer } from "../../entities/types";
 
 const formConfigCareer = {
   defaultValues: {

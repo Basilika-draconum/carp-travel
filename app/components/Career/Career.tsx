@@ -1,5 +1,5 @@
 import CareerForm from "./CareerForm";
-import careerContent from "../../public/content/career.json";
+import careerContent from "../../../public/content/career.json";
 
 const Career = () => {
   return (

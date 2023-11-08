@@ -5,7 +5,7 @@ import { Navigation, A11y, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import gallery from "../../public/content/gallery.json";
+import gallery from "../../../public/content/gallery.json";
 import "./gallery.css";
 
 const carouselSettings = {

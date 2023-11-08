@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import navLinks from "../../public/content/navigation.json";
+import navLinks from "../../../public/content/navigation.json";
 
 interface MobileMenuProps {
   closeMenu: () => void;
