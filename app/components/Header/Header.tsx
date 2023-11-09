@@ -23,7 +23,7 @@ const Header = () => {
           </a>
           <div className="mobile-menu md:hidden">
             <button
-              className="text-subTitle uppercase tracking-[1.4px]"
+              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer"
               onClick={toggleMobileMenu}
             >
               Menu
@@ -35,7 +35,10 @@ const Header = () => {
           <nav className="desktop-nav hidden tablet:flex">
             <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
               {navLink.map(({ label, href, duration }) => (
-                <li className="cursor-pointer" key={label}>
+                <li
+                  className="cursor-pointer hover:underline hover:underline-offset-2"
+                  key={label}
+                >
                   <Link
                     onClick={toggleMobileMenu}
                     to={href}

@@ -41,7 +41,7 @@ Message:${data.message}`
             <ul className="flex flex-col items-end not-italic gap-6 tablet:items-center tablet:flex-wrap tablet:h-[96px] tablet:mb-16 desktop:h-auto desktop:gap-0">
               <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-16">
                 <ul>
-                  <li>
+                  <li className="hover:underline hover:underline-offset-2">
                     <a
                       href="tel:+3809812345671"
                       className="text-subTitle tablet:text-[16px] desktop:text-lg"
@@ -49,7 +49,7 @@ Message:${data.message}`
                       +38 (098) 12 34 567
                     </a>
                   </li>
-                  <li>
+                  <li className="hover:underline hover:underline-offset-2">
                     <a
                       href="tel:+3809812345671"
                       className="text-subTitle tablet:text-[16px] desktop:text-lg"
@@ -65,7 +65,7 @@ Message:${data.message}`
               <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-32">
                 <a
                   href="mailto:support@carptravel.com"
-                  className="text-subTitle tablet:text-[16px] desktop:text-lg"
+                  className="text-subTitle tablet:text-[16px] desktop:text-lg hover:underline hover:underline-offset-2"
                 >
                   support@carptravel.com
                 </a>
@@ -77,20 +77,42 @@ Message:${data.message}`
                 <p className="text-text text-[12px] tablet:leading-[20px] desktop:w-[100px] desktop:leading-[31px]">
                   Follow us
                 </p>
-                <ul className="w-[81px] text-subTitle  tablet:text-[16px] desktop:text-lg desktop:w-[186px] desktop:flex desktop:flex-col desktop:items-end">
-                  <li>
-                    <a href="https://www.facebook.com/">facebook</a>
+                <ul className="w-[81px] text-subTitletablet:text-[16px] desktop:text-lg desktop:w-[186px] desktop:flex desktop:flex-col desktop:items-end">
+                  <li className="hover:underline hover:underline-offset-2">
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      facebook
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://www.instagram.com/dubinenko_anzhelika?igshid=NGVhN2U2NjQ0Yg%3D%3D">
+                  <li className="hover:underline hover:underline-offset-2">
+                    <a
+                      href="https://www.instagram.com/dubinenko_anzhelika?igshid=NGVhN2U2NjQ0Yg%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
                       instagram
                     </a>
                   </li>
-                  <li>
-                    <a href="https://www.youtube.com/">youtube</a>
+                  <li className="hover:underline hover:underline-offset-2">
+                    <a
+                      href="https://www.youtube.com/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      youtube
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://www.tiktok.com/">tiktok</a>
+                  <li className="hover:underline hover:underline-offset-2">
+                    <a
+                      href="https://www.tiktok.com/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      tiktok
+                    </a>
                   </li>
                 </ul>
               </li>

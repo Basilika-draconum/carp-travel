@@ -11,7 +11,7 @@ const formConfigCareer = {
     position: "",
     phone: "",
     message: "",
-    isAgree: true,
+    isAgree: false,
   },
 };
 const CareerForm = () => {
