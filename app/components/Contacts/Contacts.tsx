@@ -17,15 +17,17 @@ const Contacts = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormDataContact>(formConfigContact);
 
-  const onSubmit = handleSubmit((data) =>
+  const onSubmit = handleSubmit((data) => {
+    reset();
     toast.success(
       `Thank you, ${data.fullName}! We have received your message and will contact you soon!`,
       { duration: 4500, position: "top-center" }
-    )
-  );
+    );
+  });
 
   return (
     <section
@@ -122,8 +124,8 @@ const Contacts = () => {
             onSubmit={onSubmit}
             className="tablet:flex tablet:gap-5 desktop:flex-col"
           >
-            <div className="desktop:flex desktop:gap-5 desktop:mb-10">
-              <div className="mb-6 desktop:mb-0">
+            <div className="desktop:flex desktop:gap-5 desktop:mb-5">
+              <div className="mb-6 desktop:mb-0 relative">
                 <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
                   Full name
                 </label>
@@ -139,7 +141,7 @@ const Contacts = () => {
                     },
                   })}
                 />
-                <div className=" flex">
+                <div className="flex absolute right-0">
                   {errors.fullName?.message && (
                     <Image
                       src="/cross.svg"
@@ -148,12 +150,12 @@ const Contacts = () => {
                       height={18}
                     />
                   )}
-                  <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  <p className="text-errorColor text-xs font-extralight leading-6 tracking-[2.4px] ml-1">
                     {errors.fullName?.message}
                   </p>
                 </div>
               </div>
-              <div className="mb-6  desktop:mb-0">
+              <div className="mb-6 desktop:mb-0 relative">
                 <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
                   E-mail
                 </label>
@@ -169,7 +171,7 @@ const Contacts = () => {
                     },
                   })}
                 />
-                <div className=" flex">
+                <div className="flex absolute right-0">
                   {errors.email?.message && (
                     <Image
                       src="/cross.svg"
@@ -178,14 +180,14 @@ const Contacts = () => {
                       height={18}
                     />
                   )}
-                  <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                     {errors.email?.message}
                   </p>
                 </div>
               </div>
             </div>
             <div className="tablet:w-[463px] desktop:w-auto">
-              <div className="">
+              <div className="relative">
                 <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
                   Message
                 </label>
@@ -194,7 +196,7 @@ const Contacts = () => {
                   rows={8}
                   {...register("message", { required: "This is required" })}
                 />
-                <div className=" flex">
+                <div className="flex absolute bottom-[-18px] right-0">
                   {errors.message?.message && (
                     <Image
                       src="/cross.svg"
@@ -203,7 +205,7 @@ const Contacts = () => {
                       height={18}
                     />
                   )}
-                  <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                  <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                     {errors.message?.message}
                   </p>
                 </div>

@@ -73,7 +73,7 @@ const Gallery = () => {
                   alt={img.alt}
                   width={280}
                   height={187}
-                  className="mt-8 "
+                  className="mt-8"
                 />
               </li>
             ))}
@@ -96,8 +96,8 @@ const Gallery = () => {
                         src={img.image}
                         alt={img.alt}
                         loading="lazy"
-                        sizes="(max-width: 767px) 280px, (max-width: 1279px) 415px, 606px"
-                        className="w-[280px] h-[187px] tablet:w-[415px] tablet:h-[294px] desktop:w-[606px] desktop:h-[429px] object-cover"
+                        sizes="(max-width: 767px) 280px, (max-width: 1279px) 400px, 600px"
+                        className="w-[280px] h-[187px] tablet:w-[415px] tablet:h-[294px] desktop:w-[600px] desktop:h-[429px] object-cover"
                       />
                       <div
                         className={`absolute top-0 bottom-0 left-0 right-0 

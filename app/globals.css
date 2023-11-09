@@ -59,7 +59,7 @@ input.checked::before {
   color: #fff;
   position: absolute;
   right: 0;
-  top: -16px;
+  top: -16.5px;
 }
 .join-button {
   height: 50px;
@@ -75,5 +75,6 @@ input.checked::before {
   }
   @media screen and (min-width: 1280px) {
     background-size: 14% 100px, 14% 100%;
+      font-size: 26px;
   }
 }

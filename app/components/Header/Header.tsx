@@ -19,7 +19,13 @@ const Header = () => {
             className="cursor-pointer self-center"
             href="https://carp-travel-eosin.vercel.app/"
           >
-            <Image src="/logo.svg" alt="Logo" width={61} height={33} />
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={61}
+              height={33}
+              priority={true}
+            />
           </a>
           <div className="mobile-menu md:hidden">
             <button
@@ -61,7 +67,7 @@ const Header = () => {
             <br /> JOURNEY
           </h2>
           <div>
-            <h1 className="text-title uppercase mb-6 tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] tablet:mb-[68px] desktop:text-titleDt desktop:mb-[146px] desktop:leading-tight">
+            <h1 className="text-title uppercase mb-6 tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] tablet:mb-[90px] desktop:text-titleDt desktop:mb-[146px] desktop:leading-tight">
               Uncover <br />
               <span className="font-thin">Carpathian’s Secrets</span>
             </h1>
@@ -71,7 +77,7 @@ const Header = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <h2 className="hidden tablet:block text-sm font-light tracking-[25px] text-right mb-14 leading-normal desktop:text-[16px] desktop:tracking-[36px] desktop:mb-[181px] desktop:leading-none">
+            <h2 className="hidden tablet:block text-sm font-light tracking-[25px] text-right mb-14 leading-none desktop:text-[16px] desktop:tracking-[36px] desktop:mb-[181px]">
               <span className="text-titleTb font-medium tracking-[7px] desktop:text-titleDt">
                 7
               </span>
@@ -80,7 +86,7 @@ const Header = () => {
               </span>
               <br /> JOURNEY
             </h2>
-            <p className="text-text text-justify mb-6 max-w-md tablet:max-w-[230px] tablet:mb-7 tablet:text-[16px] tablet:leading-5 desktop:max-w-[294px] desktop:text-[18px] desktop:leading-6 ">
+            <p className="text-text text-justify mb-6 max-w-md tablet:max-w-[230px] tablet:mb-7 tablet:text-[16px] tablet:leading-5 desktop:max-w-[294px] desktop:mb-16 desktop:text-[18px] desktop:leading-6 ">
               We offer you unforgettable trips to the most beautiful parts of
               the Carpathians. Enjoy stunning views, exciting expeditions, and
               the best service!
