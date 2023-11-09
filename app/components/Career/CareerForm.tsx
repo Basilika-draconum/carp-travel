@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FormDataCareer } from "../../entities/types";
+import toast from "react-hot-toast";
 
 const formConfigCareer = {
   defaultValues: {
@@ -25,16 +26,16 @@ const CareerForm = () => {
   } = useForm<FormDataCareer>(formConfigCareer);
 
   const onSubmit = handleSubmit((data) =>
-    alert(
-      `Email:${data.email},
-    Full Name:${data.fullName},
-    Message:${data.message},
-    Phone:${data.phone},
-    ${
-      data.isAgree
-        ? "Consent to the processing of personal data."
-        : "Not consenting to the processing of personal data."
-    }`
+    toast.success(
+      `Thank you, ${
+        data.fullName
+      }! We have received your application and will contact you soon!
+      ${
+        data.isAgree
+          ? "Consent to the processing of personal data."
+          : "Not consenting to the processing of personal data."
+      }`,
+      { duration: 5000, position: "top-center" }
     )
   );
 

@@ -25,6 +25,7 @@ const Header = () => {
             <button
               className="text-subTitle uppercase tracking-[1.4px] cursor-pointer"
               onClick={toggleMobileMenu}
+              type="button"
             >
               Menu
             </button>

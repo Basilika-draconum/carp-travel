@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header/Header";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Site offer to join you unforgettable trips to the most beautiful parts of the Carpathians.",
     siteName: "CarpTravel",
-    images: { url: "/logo.svg" },
+    images: "/logo.svg",
   },
 };
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Toaster />
       </body>
     </html>
   );

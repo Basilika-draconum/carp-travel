@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FormDataContact } from "../../entities/types";
+import toast from "react-hot-toast";
 
 const formConfigContact = {
   defaultValues: {
@@ -20,10 +21,9 @@ const Contacts = () => {
   } = useForm<FormDataContact>(formConfigContact);
 
   const onSubmit = handleSubmit((data) =>
-    alert(
-      `Email:${data.email},
-Full Name:${data.fullName},
-Message:${data.message}`
+    toast.success(
+      `Thank you, ${data.fullName}! We have received your message and will contact you soon!`,
+      { duration: 4500, position: "top-center" }
     )
   );
 

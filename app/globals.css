@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --text: #FFF;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  --text: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   color: var(--text);
-  background-color:darkgray;  
+  background-color: darkgray;
 }
 
 .container-main {
@@ -30,8 +30,8 @@ body {
     padding: 0 24px;
   }
 }
-.section-main{
-  padding:55px 0;
+.section-main {
+  padding: 55px 0;
   @media screen and (min-width: 768px) {
     padding: 64px 0;
   }
@@ -49,7 +49,7 @@ body {
   outline: none;
   cursor: pointer;
 }
-.checked{
+.checked {
   background-color: black;
   position: relative;
 }
@@ -61,19 +61,19 @@ input.checked::before {
   right: 0;
   top: -16px;
 }
-.join-button{
-      height: 50px;
-      background-image: url('/mobile2.svg'), url('/mobile1.svg');
-      background-size: 15% 100%, 15% 100%;
-      background-repeat: no-repeat, no-repeat;
-      background-position: left, right;
-      color: white;
-      font-size: 16px;
-      @media screen and (min-width:768px){
-        background-image: url('/tablet1.svg'), url('/tablet2.svg');
-        background-size: 17% 100%, 17% 100%;
-      }
-      @media screen and (min-width:1280px) {
-        background-size: 14% 100px, 14% 100%;
-            }
+.join-button {
+  height: 50px;
+  background-image: url("/mobile2.svg"), url("/mobile1.svg");
+  background-size: 15% 100%, 15% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  color: white;
+  font-size: 16px;
+  @media screen and (min-width: 768px) {
+    background-image: url("/tablet1.svg"), url("/tablet2.svg");
+    background-size: 17% 100%, 17% 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    background-size: 14% 100px, 14% 100%;
+  }
 }
