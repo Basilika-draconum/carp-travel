@@ -73,6 +73,7 @@ const Gallery = () => {
                   alt={img.alt}
                   width={280}
                   height={187}
+                  loading="lazy"
                   className="mt-8"
                 />
               </li>

@@ -57,6 +57,7 @@ const Slider = () => {
                     alt={slide.title}
                     width={213}
                     height={280}
+                    loading="lazy"
                     className="image-slider"
                   />
                   <div>
