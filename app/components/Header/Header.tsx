@@ -67,7 +67,7 @@ const Header = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <h2 className="mobile:hidden tablet:block text-sm font-light tracking-[25px] text-right mb-14 leading-normal desktop:text-[16px] desktop:tracking-[36px] desktop:mb-[181px] desktop:leading-none">
+            <h2 className="hidden tablet:block text-sm font-light tracking-[25px] text-right mb-14 leading-normal desktop:text-[16px] desktop:tracking-[36px] desktop:mb-[181px] desktop:leading-none">
               <span className="text-titleTb font-medium tracking-[7px] desktop:text-titleDt">
                 7
               </span>
