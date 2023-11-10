@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FormDataContact } from "../../entities/types";
+import { FormDataContact } from "../../../entities/types";
 import toast from "react-hot-toast";
 
 const formConfigContact = {
@@ -46,6 +46,8 @@ const Contacts = () => {
                   <li className="hover:underline hover:underline-offset-2">
                     <a
                       href="tel:+3809812345671"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
                       className="text-subTitle tablet:text-[16px] desktop:text-lg"
                     >
                       +38 (098) 12 34 567
@@ -54,6 +56,8 @@ const Contacts = () => {
                   <li className="hover:underline hover:underline-offset-2">
                     <a
                       href="tel:+3809812345671"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
                       className="text-subTitle tablet:text-[16px] desktop:text-lg"
                     >
                       +38 (098) 12 34 567
@@ -64,9 +68,11 @@ const Contacts = () => {
                   Phone number
                 </p>
               </li>
-              <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-32">
+              <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-24">
                 <a
                   href="mailto:support@carptravel.com"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                   className="text-subTitle tablet:text-[16px] desktop:text-lg hover:underline hover:underline-offset-2"
                 >
                   support@carptravel.com
@@ -85,6 +91,7 @@ const Contacts = () => {
                       href="https://www.facebook.com/"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
+                      aria-label="facebook"
                     >
                       facebook
                     </a>
@@ -94,6 +101,7 @@ const Contacts = () => {
                       href="https://www.instagram.com/dubinenko_anzhelika?igshid=NGVhN2U2NjQ0Yg%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
+                      aria-label="instagram"
                     >
                       instagram
                     </a>
@@ -103,6 +111,7 @@ const Contacts = () => {
                       href="https://www.youtube.com/"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
+                      aria-label="youtube"
                     >
                       youtube
                     </a>
@@ -112,6 +121,7 @@ const Contacts = () => {
                       href="https://www.tiktok.com/"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
+                      aria-label="tiktok"
                     >
                       tiktok
                     </a>
@@ -148,6 +158,7 @@ const Contacts = () => {
                       alt="Cross"
                       width={18}
                       height={18}
+                      aria-label="cross"
                     />
                   )}
                   <p className="text-errorColor text-xs font-extralight leading-6 tracking-[2.4px] ml-1">
@@ -178,6 +189,7 @@ const Contacts = () => {
                       alt="Cross"
                       width={18}
                       height={18}
+                      aria-label="cross"
                     />
                   )}
                   <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
@@ -203,6 +215,7 @@ const Contacts = () => {
                       alt="Cross"
                       width={18}
                       height={18}
+                      aria-label="cross"
                     />
                   )}
                   <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../../../components/MobileMenu/MobileMenu";
 import { Link } from "react-scroll";
 import navLink from "../../../public/content/navigation.json";
 
@@ -15,10 +15,7 @@ const Header = () => {
     <header className="section-main w-full bg-header-bg bg-no-repeat bg-cover pt-9 tablet:pt-[25px]">
       <div className="container-main">
         <div className="flex justify-between mb-9 tablet:mb-[66px] desktop:mb-[72px]">
-          <a
-            className="cursor-pointer self-center"
-            href="https://carp-travel-eosin.vercel.app/"
-          >
+          <a className="cursor-pointer self-center" href="/" aria-label="logo">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -52,6 +49,7 @@ const Header = () => {
                     spy
                     smooth
                     duration={duration}
+                    href="#"
                   >
                     {label}
                   </Link>
@@ -97,6 +95,7 @@ const Header = () => {
               spy
               smooth
               duration={1500}
+              href="#"
             >
               Join now
             </Link>

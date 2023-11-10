@@ -1,4 +1,4 @@
-import CareerForm from "./CareerForm";
+import CareerForm from "../../../components/CareerForm/CareerForm";
 import careerContent from "../../../public/content/career.json";
 
 const Career = () => {

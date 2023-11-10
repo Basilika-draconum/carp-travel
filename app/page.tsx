@@ -1,9 +1,9 @@
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Services from "./components/Services/Services";
-import Career from "./components/Career/Career";
-import Gallery from "./components/Gallery/Gallery";
-import Contacts from "./components/Contacts/Contacts";
+import dynamic from "next/dynamic";
+const About = dynamic(() => import("./sections/About/About"));
+const Services = dynamic(() => import("./sections/Services/Services"));
+const Career = dynamic(() => import("./sections/Career/Career"));
+const Gallery = dynamic(() => import("./sections/Gallery/Gallery"));
+const Contacts = dynamic(() => import("./sections/Contacts/Contacts"));
 
 export default function Home() {
   return (

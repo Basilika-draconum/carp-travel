@@ -110,10 +110,18 @@ const Gallery = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <button type="button" className="swiper-button-prev">
+            <button
+              type="button"
+              className="swiper-button-prev"
+              aria-label="button-back"
+            >
               BACK
             </button>
-            <button type="button" className="swiper-button-next">
+            <button
+              type="button"
+              className="swiper-button-next"
+              aria-label="button-next"
+            >
               NEXT
             </button>
           </div>

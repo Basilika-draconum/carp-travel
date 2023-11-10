@@ -69,7 +69,13 @@ const CareerForm = () => {
             />
             <div className="flex absolute right-0">
               {errors.fullName?.message && (
-                <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                <Image
+                  src="/cross.svg"
+                  alt="Cross"
+                  width={18}
+                  height={18}
+                  aria-label="cross"
+                />
               )}
               <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                 {errors.fullName?.message}
@@ -94,7 +100,13 @@ const CareerForm = () => {
             />
             <div className="flex absolute right-0">
               {errors.email?.message && (
-                <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                <Image
+                  src="/cross.svg"
+                  alt="Cross"
+                  width={18}
+                  height={18}
+                  aria-label="cross"
+                />
               )}
               <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                 {errors.email?.message}
@@ -118,7 +130,13 @@ const CareerForm = () => {
             />
             <div className="flex absolute right-0">
               {errors.position?.message && (
-                <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                <Image
+                  src="/cross.svg"
+                  alt="Cross"
+                  width={18}
+                  height={18}
+                  aria-label="cross"
+                />
               )}
               <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                 {errors.position?.message}
@@ -139,7 +157,13 @@ const CareerForm = () => {
             />
             <div className="flex absolute right-0">
               {errors.phone?.message && (
-                <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                <Image
+                  src="/cross.svg"
+                  alt="Cross"
+                  width={18}
+                  height={18}
+                  aria-label="cross"
+                />
               )}
               <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                 {errors.phone?.message}
@@ -157,7 +181,13 @@ const CareerForm = () => {
             />
             <div className="flex absolute right-0">
               {errors.message?.message && (
-                <Image src="/cross.svg" alt="Cross" width={18} height={18} />
+                <Image
+                  src="/cross.svg"
+                  alt="Cross"
+                  width={18}
+                  height={18}
+                  aria-label="cross"
+                />
               )}
               <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
                 {errors.message?.message}
