@@ -2,8 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FormDataCareer } from "../../entities/types";
 import toast from "react-hot-toast";
+import useFormPersist from "react-hook-form-persist";
+import { FormDataCareer } from "../../entities/types";
 
 const formConfigCareer = {
   defaultValues: {
@@ -15,16 +16,25 @@ const formConfigCareer = {
     isAgree: false,
   },
 };
+
 const CareerForm = () => {
   const [isChecked, setIsChecked] = React.useState(
     formConfigCareer.defaultValues.isAgree
   );
+
   const {
     register,
     handleSubmit,
     reset,
+    watch,
+    setValue,
     formState: { errors },
   } = useForm<FormDataCareer>(formConfigCareer);
+
+  useFormPersist("careerFormData", {
+    watch,
+    setValue,
+  });
 
   const onSubmit = handleSubmit((data) => {
     reset();

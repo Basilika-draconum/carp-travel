@@ -2,8 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FormDataContact } from "../../../entities/types";
+import useFormPersist from "react-hook-form-persist";
 import toast from "react-hot-toast";
+import { FormDataContact } from "../../../entities/types";
 
 const formConfigContact = {
   defaultValues: {
@@ -18,9 +19,15 @@ const Contacts = () => {
     register,
     handleSubmit,
     reset,
+    watch,
+    setValue,
     formState: { errors },
   } = useForm<FormDataContact>(formConfigContact);
 
+  useFormPersist("contactFormData", {
+    watch,
+    setValue,
+  });
   const onSubmit = handleSubmit((data) => {
     reset();
     toast.success(
