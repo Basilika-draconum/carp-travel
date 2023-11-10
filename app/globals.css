@@ -63,14 +63,14 @@ input.checked::before {
 }
 .join-button {
   height: 50px;
-  background-image: url("/mobile2.svg"), url("/mobile1.svg");
+  background-image: url("/icons/mobile2.svg"), url("/icons/mobile1.svg");
   background-size: 15% 100%, 15% 100%;
   background-repeat: no-repeat, no-repeat;
   background-position: left, right;
   color: white;
   font-size: 16px;
   @media screen and (min-width: 768px) {
-    background-image: url("/tablet1.svg"), url("/tablet2.svg");
+    background-image: url("/icons/tablet1.svg"), url("/icons/tablet2.svg");
     background-size: 17% 100%, 17% 100%;
   }
   @media screen and (min-width: 1280px) {

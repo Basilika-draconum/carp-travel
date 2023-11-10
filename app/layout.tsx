@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Site offer to join you unforgettable trips to the most beautiful parts of the Carpathians.",
     siteName: "CarpTravel",
-    images: "/logo.svg",
+    images: [{ url: "/ogp/logo.png" }, { url: "/ogp/logo.svg" }],
   },
 };
 

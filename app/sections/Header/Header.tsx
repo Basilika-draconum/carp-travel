@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex justify-between mb-9 tablet:mb-[66px] desktop:mb-[72px]">
           <a className="cursor-pointer self-center" href="/" aria-label="logo">
             <Image
-              src="/logo.svg"
+              src="/icons/logo.svg"
               alt="Logo"
               width={61}
               height={33}

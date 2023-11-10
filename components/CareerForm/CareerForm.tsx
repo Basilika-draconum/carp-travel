@@ -80,7 +80,7 @@ const CareerForm = () => {
             <div className="flex absolute right-0">
               {errors.fullName?.message && (
                 <Image
-                  src="/cross.svg"
+                  src="/icons/cross.svg"
                   alt="Cross"
                   width={18}
                   height={18}
@@ -111,7 +111,7 @@ const CareerForm = () => {
             <div className="flex absolute right-0">
               {errors.email?.message && (
                 <Image
-                  src="/cross.svg"
+                  src="/icons/cross.svg"
                   alt="Cross"
                   width={18}
                   height={18}
@@ -141,7 +141,7 @@ const CareerForm = () => {
             <div className="flex absolute right-0">
               {errors.position?.message && (
                 <Image
-                  src="/cross.svg"
+                  src="/icons/cross.svg"
                   alt="Cross"
                   width={18}
                   height={18}
@@ -168,7 +168,7 @@ const CareerForm = () => {
             <div className="flex absolute right-0">
               {errors.phone?.message && (
                 <Image
-                  src="/cross.svg"
+                  src="/icons/cross.svg"
                   alt="Cross"
                   width={18}
                   height={18}
@@ -192,7 +192,7 @@ const CareerForm = () => {
             <div className="flex absolute right-0">
               {errors.message?.message && (
                 <Image
-                  src="/cross.svg"
+                  src="/icons/cross.svg"
                   alt="Cross"
                   width={18}
                   height={18}

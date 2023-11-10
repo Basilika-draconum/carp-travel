@@ -2,6 +2,7 @@
   {
    "id": "1",
     "image": "/images/offer1.jpg",
+    "image2x": "/images/offer1@2x.jpg",
     "background": "/images/offer-bg1.jpg",
     "title": "ATVs Traveling",
     "slogan": "Feel the adrenaline rush",
@@ -11,6 +12,7 @@
   {
     "id": "2",
     "image": "/images/offer2.jpg",
+    "image2x": "/images/offer2@2x.jpg",
     "background": "/images/offer-bg2.jpg",
     "title": "Rock climbing",
     "description":
@@ -20,6 +22,7 @@
   {
     "id": "3",
     "image": "/images/offer3.jpg",
+    "image2x": "/images/offer3@2x.jpg",
     "background": "/images/offer-bg3.jpg",
     "title": "Hot air ballooning",
     "description":
@@ -29,6 +32,7 @@
   {
    "id": "4",
     "image": "/images/offer4.jpg",
+    "image2x": "/images/offer4@2x.jpg",
     "background": "/images/offer-bg4.jpg",
     "title": "Skydiving",
     "description":
@@ -38,6 +42,7 @@
   {
     "id": "5",
     "image": "/images/offer5.jpg",
+    "image2x": "/images/offer5@2x.jpg",
     "background": "/images/offer-bg5.jpg",
     "title": "Rafting",
     "description":

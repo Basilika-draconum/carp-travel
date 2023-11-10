@@ -53,12 +53,13 @@ const Slider = () => {
                 </div>
                 <div className="tablet:flex tablet:gap-5">
                   <Image
-                    src={slide.image}
+                    src={slide.image2x}
                     alt={slide.title}
                     width={213}
                     height={280}
                     loading="lazy"
                     className="image-slider"
+                    sizes="(max-width: 767px) 280px, (max-width: 1279px) 463px, 607px"
                   />
                   <div>
                     <div className="flex flex-col-reverse gap-6 mb-12 mt-2 tablet:flex-col desktop:flex-row desktop:gap-2">

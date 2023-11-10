@@ -161,7 +161,7 @@ const Contacts = () => {
                 <div className="flex absolute right-0">
                   {errors.fullName?.message && (
                     <Image
-                      src="/cross.svg"
+                      src="/icons/cross.svg"
                       alt="Cross"
                       width={18}
                       height={18}
@@ -192,7 +192,7 @@ const Contacts = () => {
                 <div className="flex absolute right-0">
                   {errors.email?.message && (
                     <Image
-                      src="/cross.svg"
+                      src="/icons/cross.svg"
                       alt="Cross"
                       width={18}
                       height={18}
@@ -218,7 +218,7 @@ const Contacts = () => {
                 <div className="flex absolute bottom-[-18px] right-0">
                   {errors.message?.message && (
                     <Image
-                      src="/cross.svg"
+                      src="/icons/cross.svg"
                       alt="Cross"
                       width={18}
                       height={18}
