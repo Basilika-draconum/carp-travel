@@ -15,13 +15,13 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/svg",
       media: "(prefers-color-scheme: dark)",
-      url: "/favicon.svg",
+      url: "/icons/favicon.svg",
     },
     {
       rel: "icon",
       type: "image/svg",
       media: "(prefers-color-scheme: light)",
-      url: "/favicon-light.svg",
+      url: "/icons/favicon-light.svg",
     },
   ],
   openGraph: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Site offer to join you unforgettable trips to the most beautiful parts of the Carpathians.",
     siteName: "CarpTravel",
-    images: [{ url: "/ogp/logo.png" }, { url: "/ogp/logo.svg" }],
+    images: [{ url: "/ogp/og-image.png" }, { url: "/ogp/logo.svg" }],
   },
 };
 
