@@ -16,10 +16,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       </button>
       <ul className="bg-green p-8 rounded-lg flex flex-col items-center gap-12 text-subTitle text-[18px] tracking-[1.8px]">
         {navLinks.map(({ label, href, duration }) => (
-          <li
-            className="cursor-pointer hover:underline hover:underline-offset-2"
-            key={label}
-          >
+          <li className="cursor-pointer hover-underline-animation" key={label}>
             <Link onClick={closeMenu} to={href} spy smooth duration={duration}>
               {label}
             </Link>
