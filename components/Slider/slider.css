@@ -49,3 +49,12 @@ li.isActive::before{
         font-size: 10px;
     }
 }
+li.isActive::after {
+    @media screen and (min-width:1280px) {
+    font-size: 6px;
+        color: #fff;
+        position: absolute;
+        left: 1px;
+        top: 0;
+    }
+}

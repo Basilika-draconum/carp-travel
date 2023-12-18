@@ -71,6 +71,9 @@ const Slider = () => {
                               className="font-medium isActive ml-2 desktop:ml-3"
                             >
                               {item.title}
+                              <span className="hidden desktop:block desktop:capitalize desktop:absolute desktop:top-0 desktop:left-[310px] desktop:w-[215px] text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
+                                {item.slogan}
+                              </span>
                             </li>
                           ) : (
                             <li
@@ -83,7 +86,7 @@ const Slider = () => {
                           )
                         )}
                       </ul>
-                      <p className="text-text text-[12px] leading-6 tracking-[2.4px] text-right tablet:text-left desktop:w-[147px]">
+                      <p className="text-text text-[12px] leading-6 tracking-[2.4px] text-right tablet:text-left desktop:hidden">
                         {slide.slogan}
                       </p>
                     </div>
