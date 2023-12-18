@@ -111,10 +111,9 @@ const Contacts = () => {
                   placeholder="John Smith"
                   {...register("fullName", {
                     required: "This is required",
-                    minLength: { value: 7, message: "Min length is 7" },
                     pattern: {
-                      value: /^[A-Za-z]+$/i,
-                      message: "Enter only words",
+                      value: /^[a-zA-Z]+ [a-zA-Z]+$/,
+                      message: "Incorrect name",
                     },
                   })}
                 />

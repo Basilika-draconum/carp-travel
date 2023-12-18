@@ -62,7 +62,7 @@ const CareerForm = () => {
       <form onSubmit={onSubmit}>
         <div className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-[290px] desktop:h-[331px]">
           <div className="mb-6 tablet:mr-5 tablet:mb-4 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
+            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
               Full name
             </label>
             <input
@@ -70,10 +70,9 @@ const CareerForm = () => {
               placeholder="John Smith"
               {...register("fullName", {
                 required: "This is required",
-                minLength: { value: 7, message: "Min length is 7" },
                 pattern: {
-                  value: /^[A-Za-z]+$/i,
-                  message: "Enter only words",
+                  value: /^[a-zA-Z]+ [a-zA-Z]+$/,
+                  message: "Incorrect name",
                 },
               })}
             />
@@ -93,7 +92,7 @@ const CareerForm = () => {
             </div>
           </div>
           <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
+            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
               E-mail
             </label>
             <input
@@ -124,7 +123,7 @@ const CareerForm = () => {
             </div>
           </div>
           <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
+            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
               Position
             </label>
             <input
@@ -134,7 +133,7 @@ const CareerForm = () => {
                 required: "This is required",
                 pattern: {
                   value: /^[A-Za-z]+$/i,
-                  message: "Enter only words",
+                  message: "Incorrect position",
                 },
               })}
             />
@@ -154,7 +153,7 @@ const CareerForm = () => {
             </div>
           </div>
           <div className="mb-6 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:mb-0 tablet:text-[12px] tablet:leading-6">
+            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
               Phone
             </label>
             <input
@@ -162,7 +161,7 @@ const CareerForm = () => {
               placeholder="+ 38 097 12 34 567"
               {...register("phone", {
                 required: "This is required",
-                pattern: { value: /^\+380\d{9}$/, message: "Invalid phone" },
+                pattern: { value: /^\+380\d{9}$/, message: "Incorrect phone" },
               })}
             />
             <div className="flex absolute right-0">
@@ -181,7 +180,7 @@ const CareerForm = () => {
             </div>
           </div>
           <div className="mb-6 tablet:mb-0 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1  tablet:mb-0 tablet:text-[12px] tablet:leading-6">
+            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
               Message
             </label>
             <textarea
