@@ -50,8 +50,8 @@ const Contacts = () => {
           <address>
             <ul className="flex flex-col items-end not-italic gap-6 tablet:items-center tablet:flex-wrap tablet:h-[96px] tablet:mb-16 desktop:h-auto desktop:gap-0">
               <li className="flex flex-row gap-5 mb-6 tablet:mb-0 desktop:mb-16">
-                <ul>
-                  <li className="hover:underline hover:underline-offset-2">
+                <ul className="flex flex-col">
+                  <li className="hover-underline-animation">
                     <a
                       href="tel:+3809812345671"
                       target="_blank"
@@ -61,7 +61,7 @@ const Contacts = () => {
                       +38 (098) 12 34 567
                     </a>
                   </li>
-                  <li className="hover:underline hover:underline-offset-2">
+                  <li className="hover-underline-animation">
                     <a
                       href="tel:+3809812345671"
                       target="_blank"
@@ -81,7 +81,7 @@ const Contacts = () => {
                   href="mailto:support@carptravel.com"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="text-subTitle tablet:text-[16px] desktop:text-lg hover:underline hover:underline-offset-2"
+                  className="text-subTitle tablet:text-[16px] desktop:text-lg hover-underline-animation"
                 >
                   support@carptravel.com
                 </a>

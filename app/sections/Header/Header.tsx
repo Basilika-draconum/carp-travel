@@ -42,7 +42,7 @@ const Header = () => {
           <Logo />
           <div className="md:hidden">
             <button
-              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover:underline hover:underline-offset-2"
+              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover-underline-animation"
               onClick={toggleMobileMenu}
               type="button"
             >
