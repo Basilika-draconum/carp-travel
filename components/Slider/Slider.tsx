@@ -68,16 +68,16 @@ const Slider = () => {
                           slide.title === item.title ? (
                             <li
                               key={item.id}
-                              className="font-medium isActive ml-2 desktop:ml-3"
+                              className="font-medium isActive ml-2 desktop:ml-3 desktop:w-[240px]"
                             >
                               {item.title}
-                              <span className="hidden desktop:block desktop:capitalize desktop:absolute desktop:top-0 desktop:left-[310px] desktop:w-[215px] text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
+                              <span className="hidden desktop:block desktop:capitalize desktop:absolute desktop:top-0 desktop:left-[280px] desktop:w-[215px] text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
                                 {item.slogan}
                               </span>
                             </li>
                           ) : (
                             <li
-                              className="text-white/50 cursor-pointer"
+                              className="text-white/50 cursor-pointer desktop:w-[240px]"
                               key={item.id}
                               onClick={() => handleSlideClick(index)}
                             >
@@ -90,7 +90,7 @@ const Slider = () => {
                         {slide.slogan}
                       </p>
                     </div>
-                    <p className="text-text leading-5 tablet:text-[13px] tablet:text-justify desktop:w-[293px] desktop:text-[18px] desktop:leading-6 desktop:ml-52">
+                    <p className="text-text leading-5 tablet:text-[13px] tablet:text-justify desktop:w-[290px] desktop:text-[18px] desktop:leading-6 desktop:ml-48">
                       {slide.description}
                     </p>
                   </div>

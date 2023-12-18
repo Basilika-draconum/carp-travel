@@ -6,10 +6,12 @@
 .swiper-slide-gallery {
     width: 420px;
     height: 850px;
+
     @media screen and (min-width: 768px) {
         width: 768px;
         height: 621px;
     }
+
     @media screen and (min-width: 1280px) {
         width: auto;
         height: 780px;
@@ -20,38 +22,44 @@
     display: block;
     width: 100%;
 }
-.image-slider{
-    max-width:280px;
-    height:200px;
+
+.image-slider {
+    max-width: 280px;
+    height: 200px;
     display: block;
-   margin: 0 auto;
-   @media screen and (min-width:768px){
+    margin: 0 auto;
+
+    @media screen and (min-width:768px) {
         max-width: 450px;
         height: 380px;
-   }
-   @media screen and (min-width:1280px) {
-       max-width: 620px;
-       height: 460px;
-   }
+    }
+
+    @media screen and (min-width:1280px) {
+        max-width: 600px;
+        height: 430px;
+    }
 }
 
-li.isActive{
+li.isActive {
     position: relative;
 }
-li.isActive::before{
+
+li.isActive::before {
     content: "\2BC1";
     font-size: 6px;
     color: #fff;
     position: absolute;
     left: -8px;
     top: 0;
+
     @media screen and (min-width:1280px) {
         font-size: 10px;
     }
 }
+
 li.isActive::after {
     @media screen and (min-width:1280px) {
-    font-size: 6px;
+        font-size: 6px;
         color: #fff;
         position: absolute;
         left: 1px;
