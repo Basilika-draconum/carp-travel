@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, EffectCoverflow } from "swiper/modules";
+import gallery from "../../../public/content/gallery.json";
+import GalleryButtons from "@/components/GalleryButtons/GalleryButtons";
+import MobileGallery from "@/components/MobileGallery/MobileGallery";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import gallery from "../../../public/content/gallery.json";
 import "./gallery.css";
 
 const carouselSettings = {
@@ -65,20 +67,7 @@ const Gallery = () => {
           <span className="font-thin">Our </span>gallery
         </h2>
         <div className="">
-          <ul className="flex flex-col justify-center items-center tablet:hidden">
-            {gallery.slice(3).map((img) => (
-              <li key={img.id}>
-                <Image
-                  src={img.image}
-                  alt={img.alt}
-                  width={280}
-                  height={187}
-                  loading="lazy"
-                  className="mt-8"
-                />
-              </li>
-            ))}
-          </ul>
+          <MobileGallery />
           <div className="hidden tablet:block tablet:relative">
             <Swiper
               {...carouselSettings}
@@ -110,20 +99,7 @@ const Gallery = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <button
-              type="button"
-              className="swiper-button-prev"
-              aria-label="button-back"
-            >
-              BACK
-            </button>
-            <button
-              type="button"
-              className="swiper-button-next"
-              aria-label="button-next"
-            >
-              NEXT
-            </button>
+            <GalleryButtons />
           </div>
         </div>
       </div>

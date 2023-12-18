@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import MobileMenu from "../../../components/MobileMenu/MobileMenu";
 import { Link } from "react-scroll";
-import navLink from "../../../public/content/navigation.json";
+import Navigation from "@/components/Navigation/Navigation";
+import Logo from "@/components/Logo/Logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -15,18 +15,10 @@ const Header = () => {
     <header className="section-main w-full bg-header-bg bg-no-repeat bg-cover pt-9 tablet:pt-[25px]">
       <div className="container-main">
         <div className="flex justify-between mb-9 tablet:mb-[66px] desktop:mb-[72px]">
-          <a className="cursor-pointer self-center" href="/" aria-label="logo">
-            <Image
-              src="/icons/logo.svg"
-              alt="Logo"
-              width={61}
-              height={33}
-              priority={true}
-            />
-          </a>
+          <Logo />
           <div className="mobile-menu md:hidden">
             <button
-              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer"
+              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover:underline hover:underline-offset-2"
               onClick={toggleMobileMenu}
               type="button"
             >
@@ -36,27 +28,7 @@ const Header = () => {
               <MobileMenu closeMenu={() => setMobileMenuOpen(false)} />
             )}
           </div>
-          <nav className="desktop-nav hidden tablet:flex">
-            <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
-              {navLink.map(({ label, href, duration }) => (
-                <li
-                  className="cursor-pointer hover:underline hover:underline-offset-2"
-                  key={label}
-                >
-                  <Link
-                    onClick={toggleMobileMenu}
-                    to={href}
-                    spy
-                    smooth
-                    duration={duration}
-                    href="#"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Navigation toggleMobileMenu={toggleMobileMenu} />
         </div>
         <div className="tablet:flex tablet:gap-12 ">
           <h2 className="text-xs font-light tracking-[9px] text-right mb-6 tablet:hidden">

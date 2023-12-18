@@ -74,7 +74,7 @@ const Slider = () => {
                             </li>
                           ) : (
                             <li
-                              className="text-white/50"
+                              className="text-white/50 cursor-pointer"
                               key={item.id}
                               onClick={() => handleSlideClick(index)}
                             >
