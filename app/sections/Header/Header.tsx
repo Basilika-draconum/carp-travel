@@ -7,16 +7,40 @@ import Logo from "@/components/Logo/Logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-
+  const disableBodyScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+  const enableBodyScroll = () => {
+    document.body.style.overflow = "visible";
+  };
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.code === "Escape") {
+      setMobileMenuOpen(false);
+      enableBodyScroll();
+    }
+  };
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  });
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+    if (isMobileMenuOpen) {
+      setMobileMenuOpen(false);
+      enableBodyScroll();
+    }
+    if (!isMobileMenuOpen) {
+      setMobileMenuOpen(true);
+      disableBodyScroll();
+    }
   };
   return (
     <header className="section-main w-full bg-header-bg bg-no-repeat bg-cover pt-9 tablet:pt-[25px]">
       <div className="container-main">
         <div className="flex justify-between mb-9 tablet:mb-[66px] desktop:mb-[72px]">
           <Logo />
-          <div className="mobile-menu md:hidden">
+          <div className="md:hidden">
             <button
               className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover:underline hover:underline-offset-2"
               onClick={toggleMobileMenu}
@@ -25,7 +49,7 @@ const Header = () => {
               Menu
             </button>
             {isMobileMenuOpen && (
-              <MobileMenu closeMenu={() => setMobileMenuOpen(false)} />
+              <MobileMenu closeMenu={() => toggleMobileMenu()} />
             )}
           </div>
           <Navigation toggleMobileMenu={toggleMobileMenu} />
