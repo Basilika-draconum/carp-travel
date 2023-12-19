@@ -1,14 +1,18 @@
-import navLink from "../../public/content/navigation.json";
 import { Link } from "react-scroll";
-
+import { useFetch } from "../../hooks/useFetch";
+import { NavigationLink } from "@/entities/types";
 interface ToggleMobileMenuProps {
   toggleMobileMenu: () => void;
 }
 const Navigation: React.FC<ToggleMobileMenuProps> = ({ toggleMobileMenu }) => {
+  const { data } = useFetch("navigation") as { data: NavigationLink[] };
+  if (data === null) {
+    return <div>No data available</div>;
+  }
   return (
     <nav className="desktop-nav hidden tablet:flex">
       <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
-        {navLink.map(({ label, href, duration }) => (
+        {data.map(({ label, href, duration }) => (
           <li className="cursor-pointer hover-underline-animation" key={label}>
             <Link
               onClick={toggleMobileMenu}

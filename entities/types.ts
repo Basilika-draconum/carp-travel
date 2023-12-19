@@ -11,3 +11,10 @@ export type FormDataCareer = {
   message: string;
   isAgree: boolean;
 };
+export interface NavigationLink {
+  label: string;
+  href: string;
+  duration: number;
+  id: number;
+}
+export type ApiData = NavigationLink | FormDataContact;
