@@ -25,21 +25,5 @@ export const useFetch = (type: string) => {
     fetchData();
   }, [type, setLoading]);
 
-  //   React.useEffect(() => {
-  //     const query = `*[_type=="${type}"]`;
-  //     setLoading(true);
-
-  //     client
-  //       .fetch(query)
-  //       .then((data: ApiData[]) => setData(data))
-  //       .catch((error: Error) => {
-  //         console.error("Error fetching data:", error);
-  //         setLoading(false);
-  //       })
-  //       .finally(() => {
-  //         setLoading(false);
-  //       });
-  //   }, []);
-
   return { isLoading, data };
 };

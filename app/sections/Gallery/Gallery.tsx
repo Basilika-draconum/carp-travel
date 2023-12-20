@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./gallery.css";
+import TitleSection from "@/components/TitleSection/TitleSection";
 
 const carouselSettings = {
   spaceBetween: 20,
@@ -63,9 +64,11 @@ const Gallery = () => {
       className="section-main w-full bg-gallery-bg bg-no-repeat bg-cover bg-center"
     >
       <div className="container-main">
-        <h2 className="text-title uppercase tablet:pb-16 tablet:text-titleTb tablet:text-center desktop:px-[104px] desktop:pb-[104px] desktop:text-titleDt">
-          <span className="font-thin">Our </span>gallery
-        </h2>
+        <TitleSection
+          title1="our"
+          title2="gallery"
+          className="tablet:pb-16 tablet:text-center desktop:px-[104px] desktop:pb-[104px]"
+        />
         <div className="">
           <MobileGallery />
           <div className="hidden tablet:block tablet:relative">

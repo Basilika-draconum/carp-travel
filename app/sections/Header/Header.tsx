@@ -4,9 +4,12 @@ import MobileMenu from "../../../components/MobileMenu/MobileMenu";
 import { Link } from "react-scroll";
 import Navigation from "@/components/Navigation/Navigation";
 import Logo from "@/components/Logo/Logo";
+import { useFetch } from "@/hooks/useFetch";
+import { NavigationLink } from "@/entities/types";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const { data } = useFetch("navigation") as { data: NavigationLink[] };
   const disableBodyScroll = () => {
     document.body.style.overflow = "hidden";
   };
@@ -35,6 +38,9 @@ const Header = () => {
       disableBodyScroll();
     }
   };
+  if (data === null) {
+    return <div>No data available</div>;
+  }
   return (
     <header className="section-main w-full bg-header-bg bg-no-repeat bg-cover pt-9 tablet:pt-[25px]">
       <div className="container-main">
@@ -49,10 +55,10 @@ const Header = () => {
               Menu
             </button>
             {isMobileMenuOpen && (
-              <MobileMenu closeMenu={() => toggleMobileMenu()} />
+              <MobileMenu closeMenu={() => toggleMobileMenu()} data={data} />
             )}
           </div>
-          <Navigation toggleMobileMenu={toggleMobileMenu} />
+          <Navigation toggleMobileMenu={toggleMobileMenu} data={data} />
         </div>
         <div className="tablet:flex tablet:gap-12 ">
           <h2 className="text-xs font-light tracking-[9px] text-right mb-6 tablet:hidden">

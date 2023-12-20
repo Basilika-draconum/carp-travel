@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import slides from "../../public/content/slides.json";
 import "./slider.css";
+import TitleSection from "../TitleSection/TitleSection";
 
 const carouselSettings = {
   spaceBetween: 30,
@@ -44,9 +45,11 @@ const Slider = () => {
             >
               <div className="container-main">
                 <div className="tablet:flex tablet:justify-between tablet:items-center tablet:mb-9 desktop:justify-normal desktop:gap-[162px] desktop:mb-5">
-                  <h2 className="uppercase text-title mb-6 tablet:text-titleTb tablet:mb-0 desktop:text-titleDt">
-                    <span className="font-thin">We </span>offer
-                  </h2>
+                  <TitleSection
+                    title1="we"
+                    title2="offer"
+                    className="mb-6 tablet:mb-0"
+                  />
                   <p className="text-[43px] font-thin mb-3 text-right tablet:text-titleTb tablet:font-thin tablet:mb-0 desktop:text-titleDt desktop:font-thin">
                     0{index + 1}/<span className="text-white/50">05</span>
                   </p>

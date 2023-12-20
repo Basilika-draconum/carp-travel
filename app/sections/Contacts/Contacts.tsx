@@ -6,6 +6,7 @@ import useFormPersist from "react-hook-form-persist";
 import toast from "react-hot-toast";
 import { FormDataContact } from "../../../entities/types";
 import Socials from "@/components/Socials/Socials";
+import TitleSection from "@/components/TitleSection/TitleSection";
 
 const formConfigContact = {
   defaultValues: {
@@ -43,9 +44,11 @@ const Contacts = () => {
       className="section-main w-full bg-contact-bg bg-no-repeat bg-cover bg-center"
     >
       <div className="container-main">
-        <h2 className="uppercase text-title mb-9 tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] desktop:text-titleDt desktop:mb-[81px] desktop:leading-tight">
-          <span className="font-thin">Contact </span>us
-        </h2>
+        <TitleSection
+          title1="contact"
+          title2="us"
+          className="mb-9 tablet:tracking-[-3px] desktop:mb-[81px]"
+        />
         <div className="desktop:flex desktop:gap-[110px]">
           <address>
             <ul className="flex flex-col items-end not-italic gap-6 tablet:items-center tablet:flex-wrap tablet:h-[96px] tablet:mb-16 desktop:h-auto desktop:gap-0">

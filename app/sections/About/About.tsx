@@ -1,3 +1,5 @@
+import TitleSection from "@/components/TitleSection/TitleSection";
+
 const About = () => {
   return (
     <section
@@ -6,9 +8,11 @@ const About = () => {
     >
       <div className="container-main tablet:relative">
         <div className="tablet:flex tablet:gap-[76px] desktop:gap-6">
-          <h2 className="text-title mb-2  tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] tablet:mb-[68px] desktop:text-titleDt desktop:mb-[146px] desktop:leading-tight">
-            <span className="font-thin">WHO </span>WE ARE
-          </h2>
+          <TitleSection
+            title1="who"
+            title2="we are"
+            className="mb-2 tablet:tracking-[-3px] tablet:mb-[68px] desktop:mb-[146px]"
+          />
           <div className="tablet:mb-16 desktop:mt-4 desktop:mb-[72px]">
             <p className="text-text w-[180px] leading-5 mb-5 tablet:w-[221px] tablet:text-[16px] tablet:mb-4 desktop:w-[292px] desktop:mb-6 desktop:text-[18px]">
               <span className="text-subTitle tablet:text-[16px] desktop:text-[18px]">

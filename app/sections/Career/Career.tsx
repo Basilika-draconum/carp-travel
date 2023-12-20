@@ -1,3 +1,4 @@
+import TitleSection from "@/components/TitleSection/TitleSection";
 import CareerForm from "../../../components/CareerForm/CareerForm";
 import careerContent from "../../../public/content/career.json";
 
@@ -10,9 +11,11 @@ const Career = () => {
       >
         <div className="container-main">
           <div className="tablet:flex tablet:pb-[5px] tablet:gap-[110px] desktop:justify-between">
-            <h2 className="text-title uppercase mb-6 tablet:text-titleTb tablet:tracking-[-2px] ">
-              <span className="font-thin">Choose </span>us
-            </h2>
+            <TitleSection
+              title1="choose"
+              title2="us"
+              className="mb-6 tablet:tracking-[-2px]"
+            />
             <div className="flex justify-end">
               <p className="text-text w-[180px] tablet:w-[221px] tablet:text-justify tablet:leading-5 tablet:text-[13px] desktop:w-[270px] desktop:text-[18px]">
                 Your chance to join our passionate team in Carpathian tourism.

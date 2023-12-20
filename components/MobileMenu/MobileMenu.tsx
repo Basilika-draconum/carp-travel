@@ -1,10 +1,11 @@
 import { Link } from "react-scroll";
-import navLinks from "../../public/content/navigation.json";
+import { NavigationLink } from "@/entities/types";
 
 interface MobileMenuProps {
   closeMenu: () => void;
+  data: NavigationLink[];
 }
-const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu, data }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-md flex items-center justify-center z-50">
       <button
@@ -15,7 +16,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
         Close
       </button>
       <ul className="bg-green p-8 rounded-lg flex flex-col items-center gap-12 text-subTitle text-[18px] tracking-[1.8px]">
-        {navLinks.map(({ label, href, duration }) => (
+        {data.map(({ label, href, duration }) => (
           <li className="cursor-pointer hover-underline-animation" key={label}>
             <Link onClick={closeMenu} to={href} spy smooth duration={duration}>
               {label}
