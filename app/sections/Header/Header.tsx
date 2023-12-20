@@ -5,11 +5,18 @@ import { Link } from "react-scroll";
 import Navigation from "@/components/Navigation/Navigation";
 import Logo from "@/components/Logo/Logo";
 import { useFetch } from "@/hooks/useFetch";
-import { NavigationLink } from "@/entities/types";
+import { Header } from "@/entities/types";
+import MenuButton from "@/components/MenuButton/MenuButton";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const { data } = useFetch("navigation") as { data: NavigationLink[] };
+  const { data } = useFetch("header") as { data: Header[] };
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  });
   const disableBodyScroll = () => {
     document.body.style.overflow = "hidden";
   };
@@ -22,12 +29,6 @@ const Header = () => {
       enableBodyScroll();
     }
   };
-  React.useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  });
   const toggleMobileMenu = () => {
     if (isMobileMenuOpen) {
       setMobileMenuOpen(false);
@@ -41,24 +42,26 @@ const Header = () => {
   if (data === null) {
     return <div>No data available</div>;
   }
+  const { title1, title2, description, subtitle, button, navigationLinks } =
+    data[0];
   return (
     <header className="section-main w-full bg-header-bg bg-no-repeat bg-cover pt-9 tablet:pt-[25px]">
       <div className="container-main">
         <div className="flex justify-between mb-9 tablet:mb-[66px] desktop:mb-[72px]">
           <Logo />
           <div className="md:hidden">
-            <button
-              className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover-underline-animation"
-              onClick={toggleMobileMenu}
-              type="button"
-            >
-              Menu
-            </button>
+            <MenuButton toggleMobileMenu={toggleMobileMenu} />
             {isMobileMenuOpen && (
-              <MobileMenu closeMenu={() => toggleMobileMenu()} data={data} />
+              <MobileMenu
+                closeMenu={() => toggleMobileMenu()}
+                data={navigationLinks}
+              />
             )}
           </div>
-          <Navigation toggleMobileMenu={toggleMobileMenu} data={data} />
+          <Navigation
+            toggleMobileMenu={toggleMobileMenu}
+            data={navigationLinks}
+          />
         </div>
         <div className="tablet:flex tablet:gap-12 ">
           <h2 className="text-xs font-light tracking-[9px] text-right mb-6 tablet:hidden">
@@ -68,12 +71,12 @@ const Header = () => {
           </h2>
           <div>
             <h1 className="text-title uppercase mb-6 tablet:text-titleTb tablet:leading-none tablet:tracking-[-3px] tablet:mb-[90px] desktop:text-titleDt desktop:mb-[146px] desktop:leading-tight">
-              Uncover <br />
-              <span className="font-thin">Carpathian’s Secrets</span>
+              {title1}
+              <br />
+              <span className="font-thin">{title2}</span>
             </h1>
             <p className="text-subText mb-6 w-40 tablet:w-[262px] tablet:text-text desktop:w-[608px] desktop:text-[16px] desktop:leading-6 desktop:tracking-[1.4px]">
-              Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake /
-              Bukovel
+              {subtitle}
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -87,9 +90,7 @@ const Header = () => {
               <br /> JOURNEY
             </h2>
             <p className="text-text text-justify mb-6 max-w-md tablet:max-w-[230px] tablet:mb-7 tablet:text-[16px] tablet:leading-5 desktop:max-w-[294px] desktop:mb-16 desktop:text-[18px] desktop:leading-6 ">
-              We offer you unforgettable trips to the most beautiful parts of
-              the Carpathians. Enjoy stunning views, exciting expeditions, and
-              the best service!
+              {description}
             </p>
             <Link
               className="join-button cursor-pointer uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 hover:bg-white/20 tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px] "
@@ -99,7 +100,7 @@ const Header = () => {
               duration={1500}
               href="#"
             >
-              Join now
+              {button}
             </Link>
           </div>
         </div>

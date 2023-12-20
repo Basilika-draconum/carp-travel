@@ -17,4 +17,12 @@ export interface NavigationLink {
   duration: number;
   id: number;
 }
-export type ApiData = NavigationLink | FormDataContact;
+export interface Header{
+  title1: string;
+  title2: string;
+  subtitle: string;
+  description: string;
+  button: string;
+  navigationLinks: NavigationLink[];
+}
+export type ApiData = Header | FormDataContact;
