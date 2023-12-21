@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import useLoader from "./useLoader";
 import { client } from "@/client";

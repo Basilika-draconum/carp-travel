@@ -1,7 +1,0 @@
- [
-    { "label": "About", "href": "about", "duration": 600 },
-    { "label": "Services", "href": "services", "duration": 800 },
-    { "label": "Career", "href": "career", "duration": 1000 },
-    { "label": "Gallery", "href": "gallery", "duration": 1000 },
-    { "label": "Contacts", "href": "contacts", "duration": 1500 }
-  ]

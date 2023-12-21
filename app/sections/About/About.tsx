@@ -1,6 +1,15 @@
+"use client";
 import TitleSection from "@/components/TitleSection/TitleSection";
+import { About } from "@/entities/types";
+import { useFetch } from "@/hooks/useFetch";
 
 const About = () => {
+  const { data } = useFetch("about") as { data: About[] };
+  if (data === null) {
+    return <div>No data available</div>;
+  }
+  const { description1, description2, description3, slogan } = data[0];
+
   return (
     <section
       id="about"
@@ -16,22 +25,15 @@ const About = () => {
           <div className="tablet:mb-16 desktop:mt-4 desktop:mb-[72px]">
             <p className="text-text w-[180px] leading-5 mb-5 tablet:w-[221px] tablet:text-[16px] tablet:mb-4 desktop:w-[292px] desktop:mb-6 desktop:text-[18px]">
               <span className="text-subTitle tablet:text-[16px] desktop:text-[18px]">
-                a team of enthusiasts
+                {description1.slice(0, 22)}
               </span>{" "}
-              who are fully committed to the mission of creating unforgettable
-              and extraordinary trips to the most beautiful parts of the
-              Carpathians. Our goal is not just to show you the natural wonders
-              of the mountains, but to provide you with a deep immersion in
-              their magical atmosphere.
+              {description1.slice(22)}
             </p>
             <p className="text-text w-[180px] mb-10 tablet:w-[221px] tablet:text-[16px] tablet:mb-0 desktop:w-[292px] desktop:text-[18px]">
               <span className="text-subTitle tablet:text-[16px] desktop:text-[18px]">
-                We believe
+                {description2.slice(0, 10)}
               </span>{" "}
-              that nature has the power to inspire, strengthen character and
-              provide new perspectives. Therefore, each of our tours is aimed at
-              unlocking your potential, enriching your spiritual world and
-              creating unforgettable memories.
+              {description2.slice(10)}
             </p>
           </div>
         </div>
@@ -39,13 +41,13 @@ const About = () => {
         <div className="flex justify-end tablet:absolute  tablet:bottom-[128px] desktop:bottom-0 desktop:right-[24px]">
           <div className="text-subTitle text-right mb-10 tablet:text-[16px] tablet:mb-0">
             <h3 className="uppercase w-[180px] text-left tablet:w-[221px] tablet:text-left desktop:text-[18px] desktop:w-[296px]">
-              From vacationers <br />
+              {slogan.slice(0, 17)} <br />
               <span className="uppercase text-right tablet:ml-10 desktop:ml-16">
-                to active travelers
+                {slogan.slice(17, 36)}
               </span>
             </h3>
             <p className="text-text tablet:text-[16px] desktop:text-[18px] desktop:tracking-[2.16px]">
-              we have a tour for everyone.
+              {slogan.slice(37)}
             </p>
           </div>
         </div>
@@ -53,11 +55,9 @@ const About = () => {
         <div className="tablet:flex tablet:justify-end desktop:justify-start">
           <p className="text-text text-left tablet:w-[463px] tablet:text-justify desktop:w-[605px] desktop:text-[18px]">
             <span className="text-subTitle desktop:text-[18px]">
-              We use methods
+              {description3.slice(0, 14)}
             </span>{" "}
-            that are time-tested and proven. Our expert guides with in-depth
-            knowledge of the Carpathian landscapes lead you safely through the
-            mysteries of these mountains.
+            {description3.slice(14)}
           </p>
         </div>
       </div>

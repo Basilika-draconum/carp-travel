@@ -25,4 +25,11 @@ export interface Header{
   button: string;
   navigationLinks: NavigationLink[];
 }
-export type ApiData = Header | FormDataContact;
+export interface About{
+   description1: string;
+   description2: string;
+   description3: string;
+  slogan: string;
+}
+  
+export type ApiData = Header | FormDataContact | About;
