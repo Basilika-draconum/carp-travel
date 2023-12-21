@@ -31,5 +31,21 @@ export interface About{
    description3: string;
   slogan: string;
 }
+interface Phone {
+  phone: string;
+  _key: string;
+}
+
+export interface Social {
+  label: string;
+  _key: string;
+  href: string;
+}
+export interface ContactInfo{
+   email: string;
+  phones: Phone[];
+  socials: Social[];
+
+}
   
-export type ApiData = Header | FormDataContact | About;
+export type ApiData = Header | FormDataContact | About | ContactInfo;
