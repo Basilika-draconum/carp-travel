@@ -3,13 +3,15 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { EffectFade, Navigation } from "swiper/modules";
+import TitleSection from "../TitleSection/TitleSection";
+import { useFetch } from "@/hooks/useFetch";
+import { Services } from "@/entities/types";
+import { urlFor } from "@/client";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import slides from "../../public/content/slides.json";
 import "./slider.css";
-import TitleSection from "../TitleSection/TitleSection";
 
 const carouselSettings = {
   spaceBetween: 30,
@@ -26,20 +28,25 @@ const Slider = () => {
       swiperRef.current.swiper.slideTo(index, 500);
     }
   };
-
+  const { data } = useFetch("services") as { data: Services[] };
+  if (data === null) {
+    return <div>No data available</div>;
+  }
   return (
     <Swiper
       {...carouselSettings}
       ref={swiperRef}
       className="w-full h-full relative"
     >
-      {slides &&
-        slides.map((slide, index) => (
-          <SwiperSlide key={slide.id} className="swiper-slide-gallery">
+      {data &&
+        data.map((slide, index) => (
+          <SwiperSlide key={slide._id} className="swiper-slide-gallery">
             <div
               className="section-main"
               style={{
-                background: `url(${slide.background}) center/cover no-repeat `,
+                background: `url(${urlFor(
+                  slide.background
+                ).url()}) center/cover no-repeat `,
                 height: "100%",
               }}
             >
@@ -56,7 +63,7 @@ const Slider = () => {
                 </div>
                 <div className="tablet:flex tablet:gap-5">
                   <Image
-                    src={slide.image2x}
+                    src={urlFor(slide.image).url()}
                     alt={slide.title}
                     width={213}
                     height={280}
@@ -67,10 +74,10 @@ const Slider = () => {
                   <div>
                     <div className="flex flex-col-reverse gap-6 mb-12 mt-2 tablet:flex-col desktop:flex-row desktop:gap-2">
                       <ul className="uppercase flex flex-col gap-4 text-xl font-extralight leading-[17px] tablet:text-[22px] desktop:text-[28px] desktop:gap-6 desktop:leading-6 desktop:cursor-pointer">
-                        {slides.map((item, index) =>
+                        {data.map((item, index) =>
                           slide.title === item.title ? (
                             <li
-                              key={item.id}
+                              key={item._id}
                               className="font-medium isActive ml-2 desktop:ml-3 desktop:w-[240px]"
                             >
                               {item.title}
@@ -81,7 +88,7 @@ const Slider = () => {
                           ) : (
                             <li
                               className="text-white/50 cursor-pointer desktop:w-[240px]"
-                              key={item.id}
+                              key={item._id}
                               onClick={() => handleSlideClick(index)}
                             >
                               {item.title}

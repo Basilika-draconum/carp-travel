@@ -1,4 +1,5 @@
-import { CareerDescription } from '@/components/CareerDescription/CareerDescription';
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 export type FormDataContact = {
   fullName: string;
   email: string;
@@ -48,11 +49,17 @@ export interface ContactInfo{
   socials: Social[];
 
 }
-
  export interface CareerDescription{
    title: string;
    description: string;
    _id: string;
-
 } 
-export type ApiData = Header | FormDataContact | About | ContactInfo | CareerDescription;
+export interface Services{
+   title: string;
+  description: string;
+  slogan: string;
+  image: SanityImageSource;
+  background: SanityImageSource;
+  _id: string;
+}
+export type ApiData = Header | FormDataContact | About | ContactInfo | CareerDescription | Services;
