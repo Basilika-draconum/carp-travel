@@ -1,10 +1,11 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import useFormPersist from "react-hook-form-persist";
 import { FormDataCareer } from "../../entities/types";
+import FormInput from "../FormInput/FormInput";
+import FormTextarea from "../FormTextarea/FormTextarea";
 
 const formConfigCareer = {
   defaultValues: {
@@ -61,148 +62,45 @@ const CareerForm = () => {
       </div>
       <form onSubmit={onSubmit}>
         <div className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-[290px] desktop:h-[331px]">
-          <div className="mb-6 tablet:mr-5 tablet:mb-4 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
-              Full name
-            </label>
-            <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
-              placeholder="John Smith"
-              {...register("fullName", {
-                required: "This is required",
-                pattern: {
-                  value: /^[a-zA-Z]+ [a-zA-Z]+$/,
-                  message: "Incorrect name",
-                },
-              })}
-            />
-            <div className="flex absolute right-0">
-              {errors.fullName?.message && (
-                <Image
-                  src="/icons/cross.svg"
-                  alt="Cross"
-                  width={18}
-                  height={18}
-                  aria-label="cross"
-                />
-              )}
-              <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
-                {errors.fullName?.message}
-              </p>
-            </div>
-          </div>
-          <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
-              E-mail
-            </label>
-            <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
-              placeholder="johnsmith@email.com"
-              {...register("email", {
-                required: "This is required",
-                pattern: {
-                  value:
-                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Invalid email",
-                },
-              })}
-            />
-            <div className="flex absolute right-0">
-              {errors.email?.message && (
-                <Image
-                  src="/icons/cross.svg"
-                  alt="Cross"
-                  width={18}
-                  height={18}
-                  aria-label="cross"
-                />
-              )}
-              <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
-                {errors.email?.message}
-              </p>
-            </div>
-          </div>
-          <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
-              Position
-            </label>
-            <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
-              placeholder="Movie maker"
-              {...register("position", {
-                required: "This is required",
-                pattern: {
-                  value: /^[A-Za-z]+$/i,
-                  message: "Incorrect position",
-                },
-              })}
-            />
-            <div className="flex absolute right-0">
-              {errors.position?.message && (
-                <Image
-                  src="/icons/cross.svg"
-                  alt="Cross"
-                  width={18}
-                  height={18}
-                  aria-label="cross"
-                />
-              )}
-              <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
-                {errors.position?.message}
-              </p>
-            </div>
-          </div>
-          <div className="mb-6 tablet:mr-5 desktop:mb-4 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
-              Phone
-            </label>
-            <input
-              className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
-              placeholder="+ 38 097 12 34 567"
-              {...register("phone", {
-                required: "This is required",
-                pattern: { value: /^\+380\d{9}$/, message: "Incorrect phone" },
-              })}
-            />
-            <div className="flex absolute right-0">
-              {errors.phone?.message && (
-                <Image
-                  src="/icons/cross.svg"
-                  alt="Cross"
-                  width={18}
-                  height={18}
-                  aria-label="cross"
-                />
-              )}
-              <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
-                {errors.phone?.message}
-              </p>
-            </div>
-          </div>
-          <div className="mb-6 tablet:mb-0 relative">
-            <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
-              Message
-            </label>
-            <textarea
-              className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full tablet:h-[228px] desktop:w-[288px] desktop:h-[268px]"
-              rows={8}
-              {...register("message", { required: "This is required" })}
-            />
-            <div className="flex absolute right-0">
-              {errors.message?.message && (
-                <Image
-                  src="/icons/cross.svg"
-                  alt="Cross"
-                  width={18}
-                  height={18}
-                  aria-label="cross"
-                />
-              )}
-              <p className="text-errorColor font-extralight text-xs leading-6 tracking-[2.4px] ml-1">
-                {errors.message?.message}
-              </p>
-            </div>
-          </div>
+          <FormInput
+            label="Full name"
+            placeholder="John Smith"
+            name="fullName"
+            register={register}
+            error={errors.fullName?.message}
+            pattern={/^[a-zA-Z]+ [a-zA-Z]+$/}
+            message="Incorrect name"
+          />
+          <FormInput
+            label="E-mail"
+            placeholder="johnsmith@email.com"
+            name="email"
+            register={register}
+            error={errors.email?.message}
+            pattern={
+              /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            }
+            message="Invalid email"
+          />
+          <FormInput
+            label="Position"
+            placeholder="Movie maker"
+            name="position"
+            register={register}
+            error={errors.position?.message}
+            pattern={/^[A-Za-z]+$/i}
+            message="Incorrect position"
+          />
+          <FormInput
+            label="Phone"
+            placeholder="+ 38 097 12 34 567"
+            name="phone"
+            register={register}
+            error={errors.phone?.message}
+            pattern={/^\+380\d{9}$/}
+            message="Incorrect phone"
+          />
+          <FormTextarea error={errors.message?.message} register={register} />
         </div>
         <div className=" tablet:flex tablet:justify-between">
           <div className="flex tablet:w-[222px] desktop:w-[258px]">
