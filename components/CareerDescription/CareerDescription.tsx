@@ -4,7 +4,7 @@ import { CareerDescription } from "@/entities/types";
 const CareerDescription = () => {
   const { data } = useFetch("career") as { data: CareerDescription[] };
   if (data === null) {
-    return <div>No data available</div>;
+    return <p>Loading...</p>;
   }
 
   return (

@@ -7,6 +7,7 @@ import Logo from "@/components/Logo/Logo";
 import { useFetch } from "@/hooks/useFetch";
 import { Header } from "@/entities/types";
 import MenuButton from "@/components/MenuButton/MenuButton";
+import Loading from "@/app/loading";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
     }
   };
   if (data === null) {
-    return <div>No data available</div>;
+    return <Loading />;
   }
   const { title1, title2, description, subtitle, button, navigationLinks } =
     data[0];

@@ -1,4 +1,5 @@
 "use client";
+import Loading from "@/app/loading";
 import TitleSection from "@/components/TitleSection/TitleSection";
 import { About } from "@/entities/types";
 import { useFetch } from "@/hooks/useFetch";
@@ -6,7 +7,7 @@ import { useFetch } from "@/hooks/useFetch";
 const About = () => {
   const { data } = useFetch("about") as { data: About[] };
   if (data === null) {
-    return <div>No data available</div>;
+    return <Loading />;
   }
   const { description1, description2, description3, slogan } = data[0];
 

@@ -10,7 +10,10 @@ const Loading = () => {
         backgroundColor: "#131313",
       }}
     >
-      <p>Loading...</p>
+      <div className="loader">
+        <span className="loader-text">loading</span>
+        <span className="load"></span>
+      </div>
     </div>
   );
 };

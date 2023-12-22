@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "./slider.css";
+import Loading from "@/app/loading";
 
 const carouselSettings = {
   spaceBetween: 30,
@@ -30,7 +31,7 @@ const Slider = () => {
   };
   const { data } = useFetch("services") as { data: Services[] };
   if (data === null) {
-    return <div>No data available</div>;
+    return <Loading />;
   }
   return (
     <Swiper
@@ -47,7 +48,7 @@ const Slider = () => {
                 background: `url(${urlFor(
                   slide.background
                 ).url()}) center/cover no-repeat `,
-                height: "100%",
+                height: "auto",
               }}
             >
               <div className="container-main">
