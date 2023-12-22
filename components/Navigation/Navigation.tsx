@@ -8,13 +8,17 @@ const Navigation: React.FC<ToggleMobileMenuProps> = ({
   toggleMobileMenu,
   data,
 }) => {
+  const onClick = () => {
+    toggleMobileMenu();
+    document.body.style.overflow = "visible";
+  };
   return (
     <nav className="desktop-nav hidden tablet:flex">
       <ul className="bg-green p-8 rounded-lg flex flex-row items-center gap-12 text-subTitle text-[14px] tracking-[1.8px] desktop:gap-14">
         {data.map(({ label, href, duration }) => (
           <li className="cursor-pointer hover-underline-animation" key={label}>
             <Link
-              onClick={toggleMobileMenu}
+              onClick={onClick}
               to={href}
               spy
               smooth

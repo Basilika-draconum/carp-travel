@@ -1,7 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
-import Loading from "./loading";
 const About = dynamic(() => import("./sections/About/About"));
 const Services = dynamic(() => import("./sections/Services/Services"));
 const Career = dynamic(() => import("./sections/Career/Career"));
@@ -10,7 +8,6 @@ const Contacts = dynamic(() => import("./sections/Contacts/Contacts"));
 
 export default function Home() {
   return (
-    // <Suspense fallback={<Loading />}>
     <main className="flex min-h-screen flex-col items-center">
       <About />
       <Services />
@@ -18,6 +15,5 @@ export default function Home() {
       <Gallery />
       <Contacts />
     </main>
-    // </Suspense>
   );
 }

@@ -10,7 +10,7 @@
 }
 body {
   color: var(--text);
-  background-color: darkgray;
+  background-color: #131313;
 }
 
 .container-main {
