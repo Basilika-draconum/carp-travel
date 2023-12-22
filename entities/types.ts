@@ -1,3 +1,4 @@
+import { CareerDescription } from '@/components/CareerDescription/CareerDescription';
 export type FormDataContact = {
   fullName: string;
   email: string;
@@ -47,5 +48,11 @@ export interface ContactInfo{
   socials: Social[];
 
 }
-  
-export type ApiData = Header | FormDataContact | About | ContactInfo;
+
+ export interface CareerDescription{
+   title: string;
+   description: string;
+   _id: string;
+
+} 
+export type ApiData = Header | FormDataContact | About | ContactInfo | CareerDescription;
