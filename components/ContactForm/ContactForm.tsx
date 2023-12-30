@@ -44,7 +44,7 @@ const ContactForm = () => {
             Full name
           </label>
           <input
-            className="bg-white/[.05] py-1 pl-2 pr-2 w-full desktop:w-[293px] placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
+            className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:w-[225px] desktop:w-[293px] placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
             placeholder="John Smith"
             {...register("fullName", {
               required: "This is required",
@@ -101,7 +101,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div className="tablet:w-[463px] desktop:w-auto">
+      <div className="tablet:w-[453px] desktop:w-auto">
         <div className="relative">
           <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6 ">
             Message

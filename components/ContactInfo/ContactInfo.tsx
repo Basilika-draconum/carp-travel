@@ -21,7 +21,7 @@ const ContactInfo = () => {
                   href={`tel:${phone.phone}`}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="text-subTitle tablet:text-[16px] desktop:text-lg"
+                  className="text-subTitle tablet:leading-6 tablet:text-[16px] desktop:text-lg"
                 >
                   {formatPhoneNumber(phone.phone)}
                 </a>
@@ -37,7 +37,7 @@ const ContactInfo = () => {
             href={`mailto:${email}`}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="text-subTitle tablet:text-[16px] desktop:text-lg hover-underline-animation"
+            className="text-subTitle tablet:leading-6 tablet:text-[16px] desktop:text-lg hover-underline-animation"
           >
             {email}
           </a>

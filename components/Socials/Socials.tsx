@@ -6,7 +6,7 @@ interface SocialsProps {
 
 const Socials: React.FC<SocialsProps> = ({ socials }) => {
   return (
-    <ul className="w-[81px] text-subTitletablet:text-[16px] desktop:text-lg desktop:w-[186px] desktop:flex desktop:flex-col desktop:items-end">
+    <ul className="w-[81px] text-subTitle tablet:text-[16px] tablet:leading-6 desktop:text-lg desktop:w-[186px] desktop:flex desktop:flex-col desktop:items-end">
       {socials.map((social) => (
         <li key={social._key} className="hover-underline-animation">
           <a
