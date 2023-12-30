@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import React from "react";
 import { Inter } from "next/font/google";
 import Header from "./sections/Header/Header";
 import { Toaster } from "react-hot-toast";
@@ -31,7 +32,9 @@ export const metadata: Metadata = {
     description:
       "Site offer to join you unforgettable trips to the most beautiful parts of the Carpathians.",
     siteName: "CarpTravel",
-    images: [{ url: "/ogp/og-image.png" }, { url: "/ogp/logo.svg" }],
+    images: [
+      { url: "/ogp/og-image.png", width: 1200, height: 630, alt: "CarpTravel" },
+    ],
   },
 };
 

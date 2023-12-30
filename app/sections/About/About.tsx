@@ -24,7 +24,7 @@ const About = () => {
             className="mb-2 tablet:tracking-[-3px] tablet:mb-[68px] desktop:mb-[146px]"
           />
           <div className="tablet:mb-16 desktop:mt-4 desktop:mb-[72px]">
-            <p className="text-text w-[180px] leading-5 mb-5 tablet:w-[221px] tablet:text-[16px] tablet:mb-4 desktop:w-[292px] desktop:mb-6 desktop:text-[18px]">
+            <p className="text-text w-[180px] leading-5 mb-5 tablet:w-[221px] tablet:text-[16px] tablet:mb-4 tablet:pt-1 desktop:w-[292px] desktop:mb-6 desktop:text-[18px] desktop:leading-6 desktop:pt-2">
               <span className="text-subTitle tablet:text-[16px] desktop:text-[18px]">
                 {description1.slice(0, 22)}
               </span>{" "}
@@ -43,11 +43,11 @@ const About = () => {
           <div className="text-subTitle text-right mb-10 tablet:text-[16px] tablet:mb-0">
             <h3 className="uppercase w-[180px] text-left tablet:w-[221px] tablet:text-left desktop:text-[18px] desktop:w-[296px]">
               {slogan.slice(0, 17)} <br />
-              <span className="uppercase text-right tablet:ml-10 desktop:ml-16">
+              <span className="uppercase text-right pl-4 tablet:pl-8 desktop:ml-16">
                 {slogan.slice(17, 36)}
               </span>
             </h3>
-            <p className="text-text tablet:text-[16px] desktop:text-[18px] desktop:tracking-[2.16px]">
+            <p className="text-text text-left tablet:text-[16px] desktop:text-[18px] desktop:tracking-[2.16px]">
               {slogan.slice(37)}
             </p>
           </div>
