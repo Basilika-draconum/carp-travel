@@ -55,11 +55,15 @@ body {
 }
 input.checked::before {
   content: "\25A0";
-  font-size: 31px;
+  font-size: 22px;
   color: #fff;
   position: absolute;
-  right: 0;
-  top: -16.5px;
+  right: 0.5px;
+  top: -8px;
+  @media screen and (min-width:1280px){
+    font-size: 25px;
+    top: -10px;
+  }
 }
 .join-button {
   height: 50px;
