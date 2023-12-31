@@ -67,7 +67,7 @@ const GallerySlider = () => {
       ${isActive ? "desktop:right-[-10px]" : "opacity-75"}`}
             >
               <Image
-                width={606}
+                width={600}
                 height={429}
                 src={slide.image}
                 alt={slide.alt}
