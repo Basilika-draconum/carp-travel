@@ -4,13 +4,14 @@ CarpTravel is a website that offers unforgettable trips to the most beautiful pa
 
 ## Project Overview
 
-This project was built using a combination of technologies, including Next.js 13 with the app router, Tailwind CSS, and TypeScript.
+This project was built using a combination of technologies, including Next.js 13 with the app router, Tailwind CSS, and TypeScript, Sanity.
 
 ## Technologies Used
 
 - **Next.js 13:** Utilized for routing and server-side rendering.
 - **Tailwind CSS:** Used for responsive and efficient styling.
 - **TypeScript:** Employed for strong typing and code quality.
+- **Sanity:** Useded for getting dynamic data.
 
 ## Layout
 
@@ -45,7 +46,7 @@ This project was built using a combination of technologies, including Next.js 13
 
 ### Career (Choose us)
 
-- Form validation with **react-hook-form** and **Tailwind CSS** for error styling.
+- Form validation with **react-hook-form**, **react-hook-form-persist**, **react-hot-toast** for notification and **Tailwind CSS** for error styling.
 
 ### Gallery (Our gallery)
 
@@ -54,7 +55,7 @@ This project was built using a combination of technologies, including Next.js 13
 
 ### Contacts (Contact us)
 
-- Form validation with **react-hook-form** and **Tailwind CSS** for error styling.
+- Form validation with **react-hook-form**, **react-hook-form-persist**, **react-hot-toast** for notification and **Tailwind CSS** for error styling.
 
 ## Running the Project
 
