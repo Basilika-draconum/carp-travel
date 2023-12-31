@@ -52,7 +52,7 @@ export interface ContactInfo{
  export interface CareerDescription{
    title: string;
    description: string;
-   _id: string;
+   id: number;
 } 
 export interface Services{
    title: string;
@@ -60,6 +60,6 @@ export interface Services{
   slogan: string;
   image: SanityImageSource;
   background: SanityImageSource;
-  _id: string;
+  id: number;
 }
 export type ApiData = Header | FormDataContact | About | ContactInfo | CareerDescription | Services;

@@ -10,7 +10,7 @@ const Career = () => {
         className="section-main w-full bg-career-bg bg-no-repeat bg-cover bg-center"
       >
         <div className="container-main">
-          <div className="tablet:flex tablet:pb-[5px] tablet:gap-[110px] desktop:justify-between">
+          <div className="tablet:flex tablet:mb-[5px] tablet:gap-[121px] desktop:justify-between">
             <TitleSection
               title1="choose"
               title2="us"
