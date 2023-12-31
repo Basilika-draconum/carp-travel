@@ -14,7 +14,7 @@ const Contacts = () => {
           title2="us"
           className="mb-9 tablet:tracking-[-3px] desktop:mb-[81px]"
         />
-        <div className="desktop:flex desktop:gap-[110px]">
+        <div className="desktop:flex desktop:gap-[110px] desktop:justify-center">
           <ContactInfo />
           <ContactForm />
         </div>

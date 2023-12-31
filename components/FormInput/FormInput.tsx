@@ -20,12 +20,12 @@ const FormInput: React.FC<FormInputProps> = ({
   error,
   message,
 }) => (
-  <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 relative">
+  <div className="mb-6 tablet:mb-4 tablet:mr-5 desktop:mb-4 desktop:mr-4 relative">
     <label className="block text-white text-text tracking-[2.4px] mb-1 tablet:text-[12px] tablet:leading-6">
       {label}
     </label>
     <input
-      className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px]"
+      className="bg-white/[.05] py-1 pl-2 pr-2 w-full tablet:py-0 desktop:py-0.5 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 desktop:placeholder:text-[17px] desktop:w-[230px]"
       placeholder={placeholder}
       {...register(name, {
         required: "This is required",

@@ -12,7 +12,7 @@ const FormTextarea: React.FC<FormTextareaProps> = ({ register, error }) => {
         Message
       </label>
       <textarea
-        className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full tablet:w-[215px] tablet:h-[228px] desktop:w-[288px] desktop:h-[268px]"
+        className="bg-white/[.05] py-1 pl-2 pr-2 resize-none w-full tablet:w-[215px] tablet:h-[228px] desktop:w-[285px] desktop:h-[268px] bigScreen:w-[400px]"
         rows={8}
         {...register("message", { required: "This is required" })}
       />

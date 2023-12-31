@@ -19,7 +19,7 @@ const CareerDescription = () => {
             <h4 className="text-subTitle mb-2 tablet:text-[16px] desktop:text-[18px]">
               {title}
             </h4>
-            <p className="text-text text-xs leading-5 desktop:w-[285px] desktop:text-left desktop:leading-6 ">
+            <p className="text-text text-xs leading-5 desktop:w-[275px] desktop:text-left desktop:leading-6 ">
               {description}
             </p>
           </li>
