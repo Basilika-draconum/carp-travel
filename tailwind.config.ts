@@ -15,7 +15,8 @@ const config: Config = {
         'mobile': '320px',   
         'tablet': '768px',    
         'desktop': '1280px', 
-        'bigMobile':'480px'
+        'bigMobile': '480px',
+        'bigScreen':'1440px'
       },
       backgroundImage: {
         'header-bg': "url('/images/header.png')",
