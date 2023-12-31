@@ -55,11 +55,7 @@ const Slider = () => {
               >
                 <div className="container-main h-[850px] tablet:h-[621px] desktop:h-[780px]">
                   <div className="tablet:flex tablet:gap-44 tablet:items-center tablet:mb-9 desktop:justify-normal desktop:gap-[170px] desktop:mb-5">
-                    <TitleSection
-                      title1="we"
-                      title2="offer"
-                      // className="mb-0 tablet:mb-0"
-                    />
+                    <TitleSection title1="we" title2="offer" />
                     <p className="text-[43px] font-thin mb-3 text-right tablet:text-titleTb tablet:font-thin tablet:mb-0 desktop:text-titleDt desktop:font-thin">
                       0{id}/<span className="text-white/50">05</span>
                     </p>

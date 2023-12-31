@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TitleSectionProps {
   title1: string;
   title2: string;
