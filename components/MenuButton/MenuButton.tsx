@@ -7,6 +7,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ toggleMobileMenu }) => {
       className="text-subTitle uppercase tracking-[1.4px] cursor-pointer hover-underline-animation"
       onClick={toggleMobileMenu}
       type="button"
+      aria-label="button-menu"
     >
       Menu
     </button>

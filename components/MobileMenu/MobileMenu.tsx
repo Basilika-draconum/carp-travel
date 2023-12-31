@@ -12,6 +12,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu, data }) => {
         className="absolute top-14 right-5 text-subTitle uppercase tracking-[1.4px] cursor-pointer hover:underline hover:underline-offset-2"
         onClick={closeMenu}
         type="button"
+        aria-label="close"
       >
         Close
       </button>
