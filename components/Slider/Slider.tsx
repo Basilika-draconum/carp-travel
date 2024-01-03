@@ -43,7 +43,7 @@ const Slider = () => {
         data
           .sort((a, b) => a.id - b.id)
           .map(({ id, background, image, title, slogan, description }) => (
-            <SwiperSlide key={id} className="swiper-slide-gallery ">
+            <SwiperSlide key={id} className="swiper-slide-gallery">
               <div
                 className="section-main"
                 style={{
@@ -51,6 +51,12 @@ const Slider = () => {
                     background
                   ).url()}) center/cover no-repeat `,
                   height: "auto",
+                }}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Tab") {
+                    swiperRef.current?.swiper.slideNext(500);
+                  }
                 }}
               >
                 <div className="container-main h-[850px] tablet:h-[621px] desktop:h-[780px]">
