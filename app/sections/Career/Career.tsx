@@ -26,7 +26,7 @@ const Career = () => {
           <div className="tablet:flex ">
             <div className="tablet:mr-5 desktop:mr-6">
               <h3 className="text-center text-3xl font-extralight my-9 uppercase tablet:mt-0 tablet:mb-14 tablet:pl-[39px] desktop:text-[36px] desktop:pl-[120px] desktop:text-left desktop:mb-[45px]">
-                Why us ?
+                {career.title}
               </h3>
               <CareerDescription />
             </div>
