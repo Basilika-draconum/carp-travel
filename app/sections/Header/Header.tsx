@@ -94,7 +94,7 @@ const Header = () => {
               {description}
             </p>
             <Link
-              className="join-button cursor-pointer uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 hover:bg-white/20 tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px] "
+              className="join-button cursor-pointer uppercase text-[18px] font-bold  px-[93px] py-[14px] bg-white/10 hover:bg-white/20 focus:bg-white/20 transition-all duration-300 ease-in-out tablet:px-[64px] tablet:py-[14px] desktop:py-[10px] desktop:text-[22px]"
               to="contacts"
               spy
               smooth

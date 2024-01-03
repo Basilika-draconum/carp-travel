@@ -86,7 +86,7 @@ const Slider = () => {
                               </li>
                             ) : (
                               <li
-                                className="text-white/50 cursor-pointer  tablet:w-[180px] desktop:w-[240px]"
+                                className="text-white/50 cursor-pointer hover:text-white transition-all duration-300 ease-in-out tablet:w-[180px] desktop:w-[240px]"
                                 key={item.id}
                                 onClick={() => handleSlideClick(index)}
                               >

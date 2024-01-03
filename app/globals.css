@@ -99,7 +99,7 @@ input.checked::before {
   left: 0;
   background-color: #fff;
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
