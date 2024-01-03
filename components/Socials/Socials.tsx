@@ -13,7 +13,6 @@ const Socials: React.FC<SocialsProps> = ({ socials }) => {
             href={social.href}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            aria-label={social.label}
           >
             {social.label}
           </a>
