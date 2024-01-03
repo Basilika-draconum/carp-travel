@@ -108,7 +108,6 @@ const CareerForm = () => {
             <div className="checkbox-wrapper ">
               <input
                 type="checkbox"
-                id="isAgree"
                 {...register("isAgree")}
                 onChange={() => setIsChecked((prev) => !prev)}
                 checked={isChecked}
