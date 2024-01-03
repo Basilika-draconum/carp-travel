@@ -1,6 +1,7 @@
 import TitleSection from "@/components/TitleSection/TitleSection";
 import CareerForm from "../../../components/CareerForm/CareerForm";
 import CareerDescription from "@/components/CareerDescription/CareerDescription";
+import career from "@/public/content/career.json";
 
 const Career = () => {
   return (
@@ -18,8 +19,7 @@ const Career = () => {
             />
             <div className="flex justify-end">
               <p className="text-text w-[180px] tablet:w-[221px] tablet:text-justify tablet:leading-5 tablet:text-[13px] desktop:w-[270px] desktop:text-[18px]">
-                Your chance to join our passionate team in Carpathian tourism.
-                Seeking talented professionals to share our common mission.
+                {career.description}
               </p>
             </div>
           </div>

@@ -6,6 +6,7 @@ import useFormPersist from "react-hook-form-persist";
 import { FormDataCareer } from "../../entities/types";
 import FormInput from "../FormInput/FormInput";
 import FormTextarea from "../FormTextarea/FormTextarea";
+import career from "@/public/content/career.json";
 
 const formConfigCareer = {
   defaultValues: {
@@ -56,8 +57,8 @@ const CareerForm = () => {
     <>
       <div className="flex justify-end tablet:justify-start tablet:mb-12 desktop:mb-[14px]">
         <h4 className="text-text w-[180px] leading-5 tablet:text-[13px] desktop:text-[18px] desktop:w-[240px] desktop:leading-6">
-          Don`t miss your opportunity!
-          <br /> Fill out the form right now and join our team!
+          {career.subtitle}
+          <br /> {career.subdescription}
         </h4>
       </div>
       <form onSubmit={onSubmit}>
@@ -116,7 +117,7 @@ const CareerForm = () => {
             </div>
             <div className="ml-2">
               <label className="text-text ml-1 tablet:text-[12px] ">
-                I confirm my consent to the processing of personal data.
+                {career.isChecked}
               </label>
             </div>
           </div>
