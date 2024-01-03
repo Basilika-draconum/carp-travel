@@ -20,10 +20,15 @@ const config: Config = {
       },
       backgroundImage: {
         'header-bg': "url('/images/header.png')",
+        'header-bg@2x': "url('/images/header@2x.png')",
         'about-bg': "url('/images/about-couple.png')",
+        'about-bg@2x': "url('/images/about-couple@2x.png')",
         'career-bg': "url('/images/career.png')",
+        'career-bg@2x': "url('/images/career@2x.png')",
          'gallery-bg':"url('/images/gallery-tree.png')",
+         'gallery-bg@2x':"url('/images/gallery-tree@2x.png')",
          'contact-bg':"url('/images/contact.png')",
+         'contact-bg@2x':"url('/images/contact@2x.png')",
       },
        fontSize: {
          title: ["40px", { fontWeight: "500", lineHeight: "56px" }],
